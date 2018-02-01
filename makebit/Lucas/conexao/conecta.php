@@ -28,6 +28,6 @@
         echo "A consulta não retornou nenhum resultado";
     }
 
-    echo "<br><br>Lucas agora vai! e o commit tmb foi 6!";
+    echo "<br><br>Lucas agora vai! e o commit tmb foi 10!";
     mysqli_close($mysql);
 ?>
