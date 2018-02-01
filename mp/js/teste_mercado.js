@@ -1,0 +1,1 @@
+Mercadopago.setPublishableKey("TEST-b5ddadf1-eb2f-418d-b693-2cf7d913d933");

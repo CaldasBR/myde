@@ -1,0 +1,19 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^queromarita\.com\.br
+RewriteRule ^(.*)$ https://queromarita.com.br/$1 [R=permanent,L] 
+
+RewriteCond %{HTTP_HOST} ^www.queromarita\.com\.br
+RewriteRule ^(.*)$ https://queromarita.com.br/$1 [R=permanent,L] 
+
+RewriteCond %{HTTP_HOST} ^myde\.com\.br
+RewriteRule ^(.*)$ https://queromarita.com.br/$1 [R=permanent,L] 
+
+RewriteCond %{HTTP_HOST} ^www\.myde\.com\.br
+RewriteRule ^(.*)$ https://queromarita.com.br/$1 [R=permanent,L]
+
+RewriteCond %{HTTP_HOST} ^sejavip\.com\.br
+RewriteRule ^(.*)$ https://queromarita.com.br/$1 [R=permanent,L] 
+
+RewriteCond %{HTTP_HOST} ^www\.sejavip\.com\.br
+RewriteRule ^(.*)$ https://queromarita.com.br/$1 [R=permanent,L]

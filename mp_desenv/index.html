@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <meta name="sitelock-site-verification" content="596" />
+        <title>Quero Marita</title>
+
+		<!-- CSS  -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/media/imagens/favicon_marita.png" type="image/x-icon"/>
+	</head>
+	
+	<body>
+		<div class="navbar-fixed transp">
+			<nav class="brown lighten-2" role="navigation">
+				<div class="nav-wrapper">
+					<a id="logo-container" href="#" class="brand-logo left">
+						<img id="img_logo" src="media/imagens/Marita_logo-1-100x100.png" alt="Quero Marita">
+					</a> 
+                    <ul class="right hide-on-med-and-down">
+						<li class="active"><a href="login.html">Entrar</a></li>
+						<!-- <li><a href="https://www.redefacilbrasil.com.br/web/cadastro?p=filipe_caldas@msn.com">Cadastrar</a></li>-->
+						<li><a href="vendedor.html">Quero vender</a></li>
+                    </ul>
+                    				
+					<ul id="nav-mobile" class="side-nav">
+						<li><a href="login.html">Entrar</a></li>
+						<!--<li><a href="https://www.redefacilbrasil.com.br/web/cadastro?p=filipe_caldas@msn.com">Cadastrar</a></li>-->
+						<li><a href="vendedor.html">Quero vender</a></li>
+					</ul>
+                    
+					<a href="#" data-activates="nav-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
+				</div>
+			</nav>
+		</div>
+		
+        
+        <!--   Início do corpo da página com Paralax  -->
+        <div>
+            <div class="row">
+                <div class="parallax-container col s12 m12">
+                    <div class="parallax">
+                        <img class="responsive-img" src="/media/imagens/lazer.jpg">
+                    </div>
+                </div>
+                <div class="col s12 m3 offset-m9 login_index">
+                    <div class="row">
+                        <div class="card-panel teal white">
+                            <div class="fonte_form">
+                                <div class="row">
+                                    <div class="input-field">
+                                        <label for="email_index" style="font-size: 0.9em;">E-mail</label>
+                                        <input id="email_index" type="email" class="validate"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- botões -->
+                            <a class="waves-effect waves-light btn" href="javascript:void(0)" onclick="valida_entrar();" style="width: 100%">Entrar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section white">
+                <div class="row container">
+                    <h4 class="header index_title">DESENV - Viva mais saudável</h4>
+                    <p class="grey-text lighten-3 index_title_2">Emagrecimento, disposição e suplemento vitamínico</p>
+                </div>
+            </div>
+            
+            <!--   Anuncio  -->
+            <div class="parallax-container">
+                <div class="parallax">
+                    <img img class="responsive-img" src="/media/imagens/area_distribuidor.jpg">
+                </div>
+            </div>
+            <div class="section white">
+                <div class="row container">
+                    <h3 class="header index_title">Área do Revendedor</h3>
+                    <p class="grey-text lighten-3 index_title_2">Seja um distribuidor e acesse todos os benefícios que preparamos para você</p>
+                </div>
+            </div>
+            
+            <!--   Anuncio  -->
+            <div class="parallax-container">
+                <div class="parallax"><img img class="responsive-img" src="/media/banners/6.png"></div>
+            </div>
+            <div class="section white">
+                <div class="row container">
+                    <h3 class="header index_title">Saúde e sabor</h3>
+                    <p class="grey-text lighten-3 index_title_2">Conheça os produtos marita e se surpreenda com o sabor do café!</p>
+                </div>
+            </div>
+            
+            <!--   Anuncio  -->
+            <div class="parallax-container">
+                <div class="parallax"><img img class="responsive-img" src="/media/imagens/fit.jpg" style="width:50%"></div>
+            </div>
+            <div class="section white">
+                <div class="row container">
+                    <h3 class="header index_title">Conquista</h3>
+                    <p class="grey-text lighten-3 index_title_2">Resultados comprovados.</p>
+                </div>
+            </div>
+            
+            <!--   Anuncio  -->
+            <div class="parallax-container">
+                <div class="parallax"><img src="/media/imagens/ajuda.jpg"></div>
+            </div>
+            <div class="section white">
+                <div class="row container">
+                    <h3 class="header index_title">Realização</h3>
+                    <p class="grey-text lighten-3 index_title_2">Nós te ajudamos a conquistar sua independência. Conheça os benefícios do revendedor.</p>
+                </div>
+            </div>
+        </div>
+
+		<footer class="page-footer brown lighten-2">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 s12">
+						<h5 class="white-text">Sobre nós</h5>
+						<p class="grey-text text-lighten-2">Somos um site de vendas de produtos da empresa MYDE e desejamos auxiliar você, distribuidor e cliente Marita a ter sucesso em sua vida e negócios.</p>
+					</div>
+					<div class="col l3 s12">
+						<h5 class="white-text">Dúvidas</h5>
+						<ul>
+							<li><a href="formulario.html" class="grey-text text-lighten-2" href="#!">Entre em contato</a></li>
+                            <li><a href="https://www.redefacilbrasil.com.br/web/universidade/apresentacao/" class="grey-text text-lighten-2" href="#!">Universidade Rede Fácil</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container center-align">
+					Desenvolvimento e propriedade de 
+						<a class="orange-text text-lighten-3" href="http://www.myde.com.br">
+							<img src="media/imagens/logo-white-myde-c-2.png" style="height: 30px; width:70px; position: relative; top:10px;">
+						</a>
+					. Todos os direitos reservados. Cópia parcial ou total não autorizada.
+                    <br>
+                    <div style="margin-top: 30px;">
+                    <a href="#" onclick="window.open('https://www.sitelock.com/verify.php?site=queromarita.com.br','SiteLock','width=600,height=600,left=160,top=170');" ><img class="img-responsive" alt="SiteLock" title="SiteLock" src="//shield.sitelock.com/shield/queromarita.com.br" /></a>
+                    
+                    <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=avHfF5eLNR3iPEn1npc84m3Zgd9nD3mdkaHqv0DT80EuLZWzCEsxlKR9ME6s"></script></span>
+                    </div>
+				</div>
+			</div>
+		</footer>
+	
+		<!--  Scripts Padrão-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/bibliotecaAjax.js"></script>
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+		<script type="text/javascript" src="js/funcoes_genericas.js"></script>
+        
+        <!--  Scripts da página-->
+        <script src="js/index.js"></script>
+        
+        <!--Script de acompanhamento do Google Anlytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-99108105-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+	</body>
+</html>

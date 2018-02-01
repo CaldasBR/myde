@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <!--<script type="text/javascript" src="js/protege_pagina.js"></script>-->
+	  <title>Quero Marita</title>
+
+		<!-- CSS  -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/media/imagens/favicon_marita.png" type="image/x-icon"/>
+	</head>
+	
+	<body>
+		<div class="navbar-fixed transp">
+			<nav class="brown lighten-2" role="navigation">
+				<div class="nav-wrapper">
+					<a id="logo-container" href="#" class="brand-logo left">
+						<img id="img_logo" src="media/imagens/Marita_logo-1-100x100.png" alt="Quero Marita">
+					</a>
+					
+					<ul class="right hide-on-med-and-down">
+						<!--<li class="active"><a href="#"><i class="material-icons left ">perm_identity</i>Minha conta</a></li>-->
+						<li><a class='dropdown-button' href='#' data-activates='dropdown1'><i class="material-icons left ">perm_identity</i>Minha conta</a></li>
+						<li><a href="#"><i class="material-icons left ">library_books</i>Meus pedidos</a></li>
+						<li><a href="#"><i class="material-icons left ">shopping_basket</i>Na sacola</a></li>
+                        <li><a class='dropdown-button' href='#' data-activates='dropdown2'><i class="material-icons left ">mail</i>Fale com seu distribuidor</a></li>
+					</ul>
+				
+					<ul id="nav-mobile" class="side-nav">
+						<li class="active"><a href="#"><i class="material-icons left ">perm_identity</i>Minha conta</a></li>
+						<li><a href="#"><i class="material-icons left ">library_books</i>Meus pedidos</a></li>
+						<li><a class="grey-text text-lighten-2"><i class="material-icons left ">shopping_basket</i>Na sacola</a></li>
+                        <li class="active"><a href="#"><i class="material-icons left ">mail</i>Fale com seu distribuidor</a></li>
+					</ul>
+					
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+						<li><a href="#!">Configurações</a></li>
+						  <li><a href="#!">Convidar amigos</a></li>
+						<li class="divider"></li>
+						<li><a href="#!">Sair</a></li>
+					  </ul>
+                    
+                    <ul id='dropdown2' class='dropdown-content'>
+						<li><a href="#!">Distribuidor xxxxx </a></li>
+                        <li><a href="#!">E-mail xxxxx</a></li>
+                        <li><a href="#!">Telefone</a></li>
+						<li class="divider"></li>
+						<li><a href="#!">Sair</a></li>
+					  </ul>
+		  
+					<a href="#" data-activates="nav-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
+				</div>
+			</nav>
+		</div>
+		
+			
+		<div class="white">
+			<div class="section">
+                <!--   Icon Section   -->
+				<div class="row">
+                    
+                    <!--   Container  -->
+                    
+            <div class="container" style="width: 100%">
+				
+                <!--   Container pedido -->
+                
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <!--   Titulo do pedido -->
+                       <div class="row collapsible-header col l12 s12" style="padding: 0px;">
+                            <div class="col s4 m4 l4 brown-text brown lighten-4 text-darken-1 truncate left-align"><p>PEDIDO<b>1234</b></p></div>
+                            <div class="col s4 m4 l4 brown-text brown lighten-4 text-darken-1 truncate right-align"><p>DATA<b>10/04/17</b></p></div>
+                            <div class="col s4 m4 l4 brown-text brown lighten-4 text-darken-1 truncate center-align"><p><b>ENTREGUE</b></p></div>
+                           <i class="material-icons" style="color: #8d6e63; position: absolute; margin-top: 35px; margin-left: 6px;">swap_vertical_circle</i>
+                        </div>
+                        
+                                                
+                        <!--  corpo pedido -->
+					    <div class="collapsible-body col l12 s12">
+                            <div><p>PEDIDO <b>1234</b></p></div>
+                            <div><p>Vendedor <b>Filipe Caldas</b></p></div>
+                            <div><p>Status do pedido <b>1234</b></p></div>
+                            <div><p>Código de rastreio <b>xxxxx</b></p></div>
+                            <div><p>Forma de pagamento: crédito final <b>xxxxx</b></p></div>
+                            <div><p>Total do pedido <b>R$150,00</b></p></div>
+                            
+                        <!--  titulo tabela -->    
+                        <table class="bordered centered ">
+                           <thead>
+                               <tr>
+                                    <th>Produto</th>
+                                    <th>Descrição</th>
+                                     <th>Preço unit</th>
+                                    <th>Quantidade</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                           
+                            <!--   Linha   -->  
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <img src="media/imagens/produto_fruta_maca.png" alt="" class="img_item center" style="width: 100px;	height: 100px;">
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Maçã liofilizada, <br> sem conservantes.</p>
+                                    </td> <!-- Limitar caracteres para truncar -->   
+                                    <td>50.00</td>
+                                    <td>2</td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tbody>
+                            
+                            <!--   Linha   -->  
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <img src="media/imagens/produto_fruta_maca.png" alt="" class="img_item center" style="width: 100px;	height: 100px;">
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Maçã liofilizada, <br> sem conservantes.</p>
+                                    </td> <!-- Limitar caracteres para truncar -->   
+                                    <td>50.00</td>
+                                    <td>2</td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tbody>
+                            
+                            <!--   Frete   -->
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-4x fa-truck green-text ico_anuncio2 center-align" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Frete</p>
+                                    </td>   
+                                    <td>50.00</td>
+                                    <td>1</td>
+                                    <td>50.00</td>
+                                </tr>
+                            </tbody>
+                            
+                            <!--   Total   -->
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <i class="fa fa-4x fa-shopping-cart brown-text ico_anuncio2 center-align" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Total</p>
+                                    </td>   
+                                    <td>60.00</td>
+                                    <td>2</td>
+                                    <td>150.00</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                        </div>
+                    </li>
+                   
+                </ul>
+                
+                <!--   Container pedido -->
+                
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <!--   Titulo do pedido -->
+                       <div class="row collapsible-header col l12 s12" style="padding: 0px;">
+                            <div class="col s4 m4 l4 brown-text brown lighten-4 text-darken-1 truncate left-align"><p>PEDIDO<b>1234</b></p></div>
+                            <div class="col s4 m4 l4 brown-text brown lighten-4 text-darken-1 truncate right-align"><p>DATA<b>10/04/17</b></p></div>
+                            <div class="col s4 m4 l4 brown-text brown lighten-4 text-darken-1 truncate center-align"><p><b>ENTREGUE</b></p></div>
+                           <i class="material-icons" style="color: #8d6e63; position: absolute; margin-top: 35px; margin-left: 6px;">swap_vertical_circle</i>
+                        </div>
+                        
+                                                
+                        <!--  corpo pedido -->
+					    <div class="collapsible-body col l12 s12">
+                            <div><p>PEDIDO <b>1234</b></p></div>
+                            <div><p>Vendedor <b>Filipe Caldas</b></p></div>
+                            <div><p>Status do pedido <b>1234</b></p></div>
+                            <div><p>Código de rastreio <b>xxxxx</b></p></div>
+                            <div><p>Forma de pagamento: crédito final <b>xxxxx</b></p></div>
+                            <div><p>Total do pedido <b>R$150,00</b></p></div>
+                            
+                        <!--  titulo tabela -->    
+                        <table class="bordered centered ">
+                           <thead>
+                               <tr>
+                                    <th>Produto</th>
+                                    <th>Descrição</th>
+                                     <th>Preço unit</th>
+                                    <th>Quantidade</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                           
+                            <!--   Linha   -->  
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <img src="media/imagens/produto_fruta_maca.png" alt="" class="img_item center" style="width: 100px;	height: 100px;">
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Maçã liofilizada, <br> sem conservantes.</p>
+                                    </td> <!-- Limitar caracteres para truncar -->   
+                                    <td>50.00</td>
+                                    <td>2</td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tbody>
+                            
+                            <!--   Linha   -->  
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <img src="media/imagens/produto_fruta_maca.png" alt="" class="img_item center" style="width: 100px;	height: 100px;">
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Maçã liofilizada, <br> sem conservantes.</p>
+                                    </td> <!-- Limitar caracteres para truncar -->   
+                                    <td>50.00</td>
+                                    <td>2</td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tbody>
+                            
+                            <!--   Frete   -->
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-4x fa-truck green-text ico_anuncio2 center-align" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Frete</p>
+                                    </td>   
+                                    <td>50.00</td>
+                                    <td>1</td>
+                                    <td>50.00</td>
+                                </tr>
+                            </tbody>
+                            
+                            <!--   Total   -->
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <i class="fa fa-4x fa-shopping-cart brown-text ico_anuncio2 center-align" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Total</p>
+                                    </td>   
+                                    <td>60.00</td>
+                                    <td>2</td>
+                                    <td>150.00</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                        </div>
+                    </li>
+                   
+                </ul>
+            
+                <!--   Container pedido -->
+                
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <!--   Titulo do pedido -->
+                       <div class="row collapsible-header col l12 s12" style="padding: 0px;">
+                            <div class="col s4 m4 l4 brown-text brown lighten-4 text-darken-1 truncate left-align"><p>PEDIDO<b>1234</b></p></div>
+                            <div class="col s4 m4 l4 brown-text brown lighten-4 text-darken-1 truncate right-align"><p>DATA<b>10/04/17</b></p></div>
+                            <div class="col s4 m4 l4 brown-text brown lighten-4 text-darken-1 truncate center-align"><p><b>ENTREGUE</b></p></div>
+                           <i class="material-icons" style="color: #8d6e63; position: absolute; margin-top: 35px; margin-left: 6px;">swap_vertical_circle</i>
+                        </div>
+                        
+                                                
+                        <!--  corpo pedido -->
+					    <div class="collapsible-body col l12 s12">
+                            <div><p>PEDIDO <b>1234</b></p></div>
+                            <div><p>Vendedor <b>Filipe Caldas</b></p></div>
+                            <div><p>Status do pedido <b>1234</b></p></div>
+                            <div><p>Código de rastreio <b>xxxxx</b></p></div>
+                            <div><p>Forma de pagamento: crédito final <b>xxxxx</b></p></div>
+                            <div><p>Total do pedido <b>R$150,00</b></p></div>
+                            
+                        <!--  titulo tabela -->    
+                        <table class="bordered centered ">
+                           <thead>
+                               <tr>
+                                    <th>Produto</th>
+                                    <th>Descrição</th>
+                                     <th>Preço unit</th>
+                                    <th>Quantidade</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                           
+                            <!--   Linha   -->  
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <img src="media/imagens/produto_fruta_maca.png" alt="" class="img_item center" style="width: 100px;	height: 100px;">
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Maçã liofilizada, <br> sem conservantes.</p>
+                                    </td> <!-- Limitar caracteres para truncar -->   
+                                    <td>50.00</td>
+                                    <td>2</td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tbody>
+                            
+                            <!--   Linha   -->  
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <img src="media/imagens/produto_fruta_maca.png" alt="" class="img_item center" style="width: 100px;	height: 100px;">
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Maçã liofilizada, <br> sem conservantes.</p>
+                                    </td> <!-- Limitar caracteres para truncar -->   
+                                    <td>50.00</td>
+                                    <td>2</td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tbody>
+                            
+                            <!--   Frete   -->
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-4x fa-truck green-text ico_anuncio2 center-align" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Frete</p>
+                                    </td>   
+                                    <td>50.00</td>
+                                    <td>1</td>
+                                    <td>50.00</td>
+                                </tr>
+                            </tbody>
+                            
+                            <!--   Total   -->
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <i class="fa fa-4x fa-shopping-cart brown-text ico_anuncio2 center-align" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <p class="left_align truncate">Total</p>
+                                    </td>   
+                                    <td>60.00</td>
+                                    <td>2</td>
+                                    <td>150.00</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                        </div>
+                    </li>
+                   
+                </ul>
+                    
+                </div>
+                </div>
+			</div>
+		</div>
+		
+		<footer class="page-footer brown lighten-2">
+			<div class="container">
+				<div class="row">
+					<div class="col l3 s12">
+						<h5 class="white-text">Sobre nós</h5>
+						<p class="grey-text text-lighten-2">Somos um site de vendas de produtos da empresa MYDE e desejamos auxiliar você, distribuidor e cliente Marita a ter sucesso em sua vida e negócios.</p>
+					</div>
+					<div class="col l2 s12">
+						<h5 class="white-text">Dúvidas</h5>
+						<ul>
+							<li><a class="grey-text text-lighten-2" href="#!">Entre em contato</a></li>
+							<li><a class="grey-text text-lighten-2" href="#!">Dúvidas frequentes</a></li>
+							<li><a class="grey-text text-lighten-2" href="#!">Universidade Rede Fácil</a></li>
+						</ul>
+					</div>
+					<div class="col l2 s12">
+						<h5 class="white-text">Nossa Rede</h5>
+						<ul>
+							<li><a class="grey-text text-lighten-2" href="#!">Localize um distribuidor</a></li>
+							<li><a class="grey-text text-lighten-2" href="#!">Site da rede</a></li>
+							<li><a class="grey-text text-lighten-2" href="#!">Youtube</a></li>
+						</ul>
+					</div>
+                    <div class="col l5 s12">
+						<h5 class="white-text">Fale com seu distribuidor</h5>
+						<div class="card small">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img src="/media/imagens/area_distribuidor.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">José da Silva<i class="material-icons right">more_vert</i></span>
+                                <p>Distribuidor Independente</p>
+                                
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">José da Silva<i class="material-icons right">close</i></span>
+                                <p>Sou um distribuidor dos produtos marita. Entre em contato em caso de dúvida xxx xxx xxx</p>
+                                <p>Acesse também link para minha rede social</p>
+                                <p><a href="#">link xxxx xxxx xxx </a></p>
+                                <p>011 4567-1234</p>
+                                <p>xxx.ggg.@gmail.com</p>
+                            </div>
+                        </div>
+					</div>
+                </div>
+			</div>
+            
+            
+			<div class="footer-copyright">
+				<div class="container center-align">
+					Desenvolvimento e propriedade de 
+						<a class="orange-text text-lighten-3" href="http://www.myde.com.br">
+							<img src="media/imagens/logo-white-myde-c-2.png" style="height: 30px; width:70px; position: relative; top:10px;">
+						</a>
+					. Todos os direitos reservados. Cópia parcial ou total não autorizada.
+                    <br>
+                    <div style="margin-top: 30px;">
+                    <a href="#" onclick="window.open('https://www.sitelock.com/verify.php?site=queromarita.com.br','SiteLock','width=600,height=600,left=160,top=170');" ><img class="img-responsive" alt="SiteLock" title="SiteLock" src="//shield.sitelock.com/shield/queromarita.com.br" /></a>
+                    
+                    <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=avHfF5eLNR3iPEn1npc84m3Zgd9nD3mdkaHqv0DT80EuLZWzCEsxlKR9ME6s"></script></span>
+                    </div>
+				</div>
+			</div>
+		</footer>
+	
+	
+		<!--  Scripts-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/bibliotecaAjax.js"></script>
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+		<script type="text/javascript" src="js/funcoes_genericas.js"></script>
+		<script type="text/javascript" src="js/loja.js"></script>
+	</body>
+</html>

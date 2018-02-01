@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+        <script type="text/javascript" src="js/protege_pagina.js"></script>        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Quero Marita</title>
+
+		<!-- CSS  -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/media/imagens/favicon_marita.png" type="image/x-icon"/>
+	</head>
+	
+	<body>
+		<div class="navbar-fixed transp">
+			<nav id="barra_menu" class="brown lighten-2">
+                
+            </nav>
+		</div>
+        <br>
+        <div id="faixa_bread" class="col s12 brown-text text-darken-3">
+        </div>
+        <br>
+		<div class="row">
+			<div class="col s12">
+				<!--        <a class="bt_finalizar right waves-effect waves-light btn orange darken-4" href="https://queromarita.com.br/bg_pagamento_transp.php?fn=pagar_distrib">Finalizar Compra</a>            -->
+                <!--<a class="bt_finalizar right waves-effect waves-light btn orange darken-4" href="javascript:void(0);" onclick="comprar();">Finalizar Compra</a>-->
+				<h5 class="brown-text text-darken-1 bold">MINHAS ESCOLHAS:</h5>
+				<table class="bordered">
+					<thead>
+						<tr>
+							<th>PRODUTOS:</th>
+							<th>QUANTIDADE:</th>
+							<th>VALOR UNITÁRIO:</th>
+							<th>SUB-TOTAL:</th>
+						</tr>
+					</thead>
+
+					<tbody id='caixa'>
+				
+        			</tbody>
+      			</table>
+			</div>
+		</div>
+		<div class="row">
+			<!--<div id="frete" class="col s6 left center">
+				<span class="posicao_cep grey-text text-darken-1"> Calcule o frete e prazo:</span>
+				<input type="text" name="cep" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9">
+				<a id="ok_calcular_cep" href="javascript:void(0);" onclick="atualizar_frete();" class="waves-effect waves-light btn green white-text ">OK</a>
+			</div>-->
+			<div id="descricao" class="col s3 offset-s9  brown lighten-5 center bold">
+				<!--<span> produtos: </span>
+				<br>
+				<span>Frete: </span>
+				<br>-->
+				<span class="bold" style="font-size: 1.3em;">Total: </span>
+			</div>
+			<div id="subtotal" class="col s3  right brown lighten-5 center">
+				<!--<span>R$ </span>
+				<span id="valor_produto"> 0,00</span>
+				<br>
+				<span>R$ </span>
+				<span id="valor_frete">0,00</span>-->
+				<br>
+				<span class="bold" >R$ </span>
+				<span class="bold" id="valor_final">0,00</span>
+			</div>
+		</div>
+		<!--<a class="bt_finalizar right waves-effect waves-light btn orange darken-4" href="https://queromarita.com.br/bg_pagamento_transp.php?fn=pagar_distrib">Finalizar Compra</a>-->
+        <a class="bt_finalizar right waves-effect waves-light btn orange darken-4" href="javascript:void(0);" onclick="comprar();">Finalizar Compra</a>
+		<br><br><br>	
+		
+		<footer id="rodape" class="page-footer brown lighten-2">
+
+		</footer>      
+        
+        
+        <!--  Scripts Padrão-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/bibliotecaAjax.js"></script>
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+		<script type="text/javascript" src="js/funcoes_genericas.js"></script>
+        
+        <script type="text/javascript" src="js/sacola.js"></script>
+        
+        <!--Script de acompanhamento do Google Anlytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-99108105-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+        
+        <!--  Scripts da página-->
+		
+	</body>
+</html>

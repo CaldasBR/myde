@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>MakeBit</title>
+
+        <!-- CSS  -->
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="media/imagens/makebit_logo_32.png" type="image/x-icon" />
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+
+        <!--  Scripts Padrão-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/bibliotecaAjax.js"></script>
+        <script type="text/javascript" src="js/funcoes_genericas.js"></script>
+
+        <!--  Scripts da página-->
+        <!--<script type="text/javascript" src="js/relatorio_vendas.js"></script>-->
+        <script src="js/grafico.js"></script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            // Load the Visualization API and the controls package.
+            google.charts.load('current', { 'packages': ['corechart', 'controls'] });
+            google.charts.setOnLoadCallback(drawVisualization);
+        </script>
+    </head>
+
+    <body>
+        <div id="dashboard">
+            <div id="chart" style='width: 915px; height: 300px;'></div>
+            <div id="control" style='width: 915px; height: 50px;'></div>
+        </div>
+    </body>
+
+</html>

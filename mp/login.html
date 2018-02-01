@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	  <title>Quero Marita</title>
+
+		<!-- CSS  -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        <!-- Plugin WaitMe para mostrar "carregando" em alguma ação -->
+		<link type="text/css" rel="stylesheet" href="css/waitMe.css">
+
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/media/imagens/favicon_marita.png" type="image/x-icon"/>
+
+		<!-- Hotjar Tracking Code for queromarita.com.br -->
+		<script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:543281,hjsv:5};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+	</head>
+
+	<body>
+        <header>
+            <div class="navbar-fixed transp">
+                <nav class="brown lighten-2" role="navigation">
+                    <div class="nav-wrapper">
+                        <a id="logo-container" href="https://queromarita.com.br" class="brand-logo left">
+                            <img id="img_logo" src="media/imagens/Marita_logo-1-100x100.png" alt="Quero Marita">
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <li class="active"><a href="index.html">Voltar</a></li>
+                            <li><a href="vendedor.html">Seja um revendedor</a></li>
+                        </ul>
+
+                        <ul id="nav-mobile" class="side-nav">
+                            <li><a href="index.html">Voltar</a></li>
+                            <li><a href="vendedor.html">Distribuidor</a></li>
+                        </ul>
+
+                        <a href="#" data-activates="nav-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Modal Loading -->
+			<div id="wait">
+				<div id="wait-conteudo">
+
+				</div>
+			</div>
+            <br>
+            <!-- DIV INICIO -->
+            <div id="div_inicio" class="container s12 m12" style="display: none;">
+                <div class="card-panel teal white">
+                    <div class="col m6 offset-m3 s12">
+                        <div class="row fonte_form">
+                            <div class="center">
+                                <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                                <h4 class="brown-text text-lighten-1 bold">Bem vindo ao site Quero Marita</h4>
+                                <p class="brown-text text-lighten-1 bold"> Entre com seu email para acessar a loja.</p>
+                                <br>
+                                <div class="row center">
+                                    <div class="col s12 m6 offset-m3">
+                                        <input id="email" type="email" class="white brown-text validate" placeholder="Digite aqui seu email"/>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="https://queromarita.com.br/" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                    <a href="#" onclick="verifica_email();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Entrar</a>
+										<div class="row">
+											<br>
+		                                    <a href="javascript:;" onclick="existe_email();" class="brown-text text-lighten-1 light"><ins>Tenho problemas com o acesso</ins></a>
+		                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIV UF -->
+            <div id="div_cadastrar_cidade" class="container s12 m12" style="display: none;">
+                <div class="card-panel teal white">
+                    <div class="col m6 offset-m3 s12">
+                        <div class="row fonte_form">
+                            <div class="center">
+                                <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                                <p class="brown-text text-lighten-1 bold">Agora vamos selecionar um distribuidor</p>
+                                <br>
+                                <div class="row center">
+                                    <div class="col s12 m6 offset-m3">
+						                <select id="uf">
+                                            <option value="" disabled selected>Qual sua UF?</option>
+                                                <option value="AC" >AC</option>
+                                                <option value="AL" >AL</option>
+                                                <option value="AM" >AM</option>
+                                                <option value="AP" >AP</option>
+                                                <option value="BA" >BA</option>
+                                                <option value="CE" >CE</option>
+                                                <option value="DF" >DF</option>
+                                                <option value="ES" >ES</option>
+                                                <option value="GO" >GO</option>
+                                                <option value="MA" >MA</option>
+                                                <option value="MG" >MG</option>
+                                                <option value="MS" >MS</option>
+                                                <option value="MT" >MT</option>
+                                                <option value="PA" >PA</option>
+                                                <option value="PB" >PB</option>
+                                                <option value="PE" >PE</option>
+                                                <option value="PI" >PI</option>
+                                                <option value="PR" >PR</option>
+                                                <option value="RJ" >RJ</option>
+                                                <option value="RN" >RN</option>
+                                                <option value="RO" >RO</option>
+                                                <option value="RR" >RR</option>
+                                                <option value="RS" >RS</option>
+                                                <option value="SC" >SC</option>
+                                                <option value="SE" >SE</option>
+                                                <option value="SP" >SP</option>
+                                                <option value="TO" >TO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <a href="#" onclick="voltar_cadastro_cidade();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                    <a href="#" onclick="procurar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Procurar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIV SELECIONAR DISTRIBUIDOR -->
+            <div id="div_cadastrar_selecionar" class="container s12 m12" style="display: none;">
+                <div class="card-panel teal white">
+                    <div class="col m6 offset-m3 s12">
+                        <div class="row fonte_form">
+                            <div class="center">
+                                <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                                <p>Escolha seu distribuidor:</p>
+                                <div class="row center">
+                                    <div id='select_distrib_cadastro' class="col s12 m6 offset-m3">
+                                    <!-- conteúdo PHP -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <a href="#" onclick="voltar_cadastro_selecionar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ###### MODAL CADASTRAR ####### -->
+            <div id="div_cadastrar" class="container s12 m12" style="display: none;">
+                <div class="card-panel teal white">
+                    <div class="col m6 offset-m3 s12">
+                        <div class="row fonte_form">
+                            <div class="center">
+                                <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                                <p id="texto_cadastro" class="brown-text bold"></p>
+                                <br>
+                                <div class="row center">
+                                    <div class="col s12 m6 offset-m3">
+                                        <input id="email_cadastro" type="email" class="white brown-text validate" placeholder="Digite seu email"/>
+                                        <br>
+                                        <input id="nome_completo" type="text" class="white brown-text validate" placeholder="Digite seu nome completo"/>
+                                        <br>
+                                        <input id="celular" type="text" class="white brown-text validate" placeholder="Celular (xx) xxxxx-xxxx" maxlength="15"/>
+                                        <br>
+                                        <input id="cpf" type="text" class="white brown-text validate" placeholder="Digite seu CPF" maxlength="14"/>
+                                        <br>
+                                        <input id="senha_cadastro" type="password" class="white brown-text validate" placeholder="Digite uma senha com pelo menos 8 dígitos"/>
+                                        <input id="id_distribuidor" type="text" class="white brown-text" style="display:none;"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <a href="#" onclick="voltar_cadastro_selecionar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                    <a href="#" onclick="cadastrar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Cadastrar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- DIV CONFIRMAR -->
+            <div id="div_cadastrar_confirmar" class="container s12 m12" style="display: none;">
+                <div class="card-panel teal white">
+                    <div class="col m6 offset-m3 s12">
+                        <div class="row fonte_form">
+                            <div class="center">
+                                <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                                <p class="brown-text text-lighten-1 bold">Confirme sua senha</p>
+                                <br>
+                                <div class="row center">
+                                    <div class="col s12 m6 offset-m3">
+                                        <input id="confirma_senha" type="password" class="white brown-text validate" placeholder="Digite novamente sua senha"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <a href="#" onclick="voltar_cadastro_confirmar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                    <a href="#" onclick="cadastrar_confirmar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Confirmar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIV LOGAR -->
+            <div id="div_login" class="container s12 m12" style="display: none;">
+                <div class="card-panel teal white">
+                    <div class="col m6 offset-m3 s12">
+                        <div class="row fonte_form">
+                            <div class="center">
+                                <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                                <p id="texto_login" class="brown-text text-lighten-1 bold">Efetue entre com sua senha para ter acesso a loja exclusiva.</p>
+                                <br>
+                                <div class="row center">
+                                    <div class="col s12 m6 offset-m3">
+                                        <input id="email_login" type="email" class="white brown-text validate" placeholder="Digite seu email"/>
+                                        <br>
+                                        <input id="senha_login" type="password" class="white brown-text validate" placeholder="Senha"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <a href="javascript:;" onclick="existe_email();" class="brown-text text-lighten-1 light"><ins>Tenho problemas com o acesso</ins></a>
+                                </div>
+                                <div class="row">
+                                    <a href="#" onclick="voltar_login();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                    <a href="#" onclick="login();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Entrar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+
+		<footer id="rodape" class="page-footer brown lighten-2">
+
+		</footer>
+
+
+		<!--  Scripts Padrão-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/bibliotecaAjax.js"></script>
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+		<script type="text/javascript" src="js/funcoes_genericas.js"></script>
+        <script src="js/waitMe.js"></script>
+
+        <!--  Scripts da página-->
+		<script type="text/javascript" src="js/login.js"></script>
+
+        <!--Script de acompanhamento do Google Anlytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-99108105-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+
+        <!--  Selo segurança godaddy -->
+        <script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=avHfF5eLNR3iPEn1npc84m3Zgd9nD3mdkaHqv0DT80EuLZWzCEsxlKR9ME6s"></script>
+	</body>
+</html>

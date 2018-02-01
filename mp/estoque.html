@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <script type="text/javascript" src="js/protege_pagina.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Quero Marita</title>
+
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/media/imagens/favicon_marita.png" type="image/x-icon"/>
+
+        <!-- Hotjar Tracking Code for queromarita.com.br -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:543281,hjsv:5};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+
+    <body>
+        <div class="navbar-fixed transp">
+            <nav id="barra_menu" class="brown lighten-2">
+
+            </nav>
+        </div>
+
+        <br>
+        <div id="faixa_bread" class="col s12 brown-text text-darken-3">
+
+        </div>
+
+        <div class="white">
+            <div class="section">
+
+                <!--
+                <div>
+                    <a href="#duvida">
+                        <h5 style="color: #7C635A;" class="center-align">Quero fazer gestão de estoque pelo site:
+                            <i class="fa fa-lg fa-question-circle ico_interrogacao" aria-hidden="true" style="color: #7C635A"></i>
+                        </h5>
+                    </a>
+                </div>
+                <br>
+                <div class="switch center-align" style="margin-bottom: 20px;margin-top: -20px;">
+                    <label>
+                        Não
+                        <input type="checkbox" id="controla_frete">
+                        <span class="lever"></span>
+                        Sim
+                    </label>
+                </div>
+                -->
+
+                <div>
+                    <div class="file-field input-field">
+                        <a href="loja.html?fn=minha_loja" class="waves-effect waves-light btn botao_estoque">Ver minha loja</a>
+                        <a href="#" class="waves-effect waves-light btn botao_estoque" onclick="salvar();" >Salvar Alterações</a>
+                    </div>
+                </div>
+
+                <!-- ###### MODAL DUVIDA ###### -->
+                <!-- Modal Structure -->
+                <div id="duvida" class="modal" style="max-width: 60%; margin-left: 0%;">
+                    <div class="modal-content" style="background-color:#a1887f">
+                        <div class="center-align"><img src="/media/imagens/favicon_marita.png"></div>
+                        <h3 class="center-align" style="color: white">Atenção</h3>
+                        <h5 class="center-align" style="color: white">Esta opção definirá seu tipo de gestão de estoque pelo site, conforme explicação abaixo.</h5>
+                        <h4 class="center-align" style="color: white">Se optar por sim:</h4>
+                        <p class="center-align" style="color: white">Ativando "sim" você optará por fazer a gestão de estoque pelo site. Isso quer dizer que:<br></p>
+                        <p class="center-align" style="color: white"> 1) O site fará a saída de estoque de seus produtos de forma automática;<br></p>
+                        <p class="center-align" style="color: white"> 2) Possibilitará que você escolha um limite mínimo de estoque para ser notificado de quando fazer a próxima compra;<br></p>
+                        <p class="center-align" style="color: white"> 3) As vendas estarão vinculadas ao estoque, ou seja, o comprador só conseguirá fazer pedidos caso você tenha estoque, assim o site o ajudará a fazer vendas somente no prazo compbinado com o consumidor, evitando atrasos nas entregas.<br></p>
+                        <p class="center-align" style="color: white"> 4) IMPORTANTE: Qualquer venda fora do site precisa ser notificada em "vendas avulsas" para que o site possa fazer o acompanhamento do estoque e notificá-lo de forma efetiva.<br></p>
+                        <h4 class="center-align" style="color: white">Se optar por não:</h4>
+                        <p class="center-align" style="color: white">Mantendo opção "não" você optará por NÃO fazer a gestão de estoque pelo site. Isso quer dizer que:<br></p>
+                        <p class="center-align" style="color: white"> 1) O site não fará a saída de estoque de seus produtos de forma automática;<br></p>
+                        <p class="center-align" style="color: white"> 2) Não fará a notificação para que você reponha o estoque;<br></p>
+                        <p class="center-align" style="color: white"> 3) As vendas NÃO estarão vinculadas a estoque, ou seja, as suas vendas estarão ilimitadas pois não haverá visão de estoque.<br></p>
+                    </div>
+                    <div class="center-align" "modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Contactar revendedor</a>
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+                    </div>
+                </div>
+
+                <!--   Table Section   -->
+
+                <table class="bordered centered">
+                    <thead>
+                        <tr>
+                            <th>Selecione produtos <br> que quer vender</th>
+                            <th>Produto</th>
+                            <th>Descrição</th>
+                            <th>Preço mínimo</th>
+                            <th>Preço venda</th>
+                            <th>Estoque mínimo (aviso)</th>
+                            <th>Estoque Atual (site)</th>
+                            <th>Status</th>
+                            <th>Frete Grátis</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="conteudo_estoque">
+                        <!--   Linha   -->
+                    </tbody>
+                </table>
+
+                <div>
+                    <div class="file-field input-field">
+                        <a href="loja.html?fn=minha_loja" class="waves-effect waves-light btn botao_estoque">Ver minha loja</a>
+                        <a href="#" class="waves-effect waves-light btn botao_estoque" onclick="salvar();" >Salvar Alterações</a>
+                    </div>
+                </div>
+
+                <br>
+            </div>
+        </div>
+
+        <br>
+
+        <footer id="rodape" class="page-footer brown lighten-2">
+
+		</footer>
+
+        <!--  Scripts Padrão-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/bibliotecaAjax.js"></script>
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+		<script type="text/javascript" src="js/funcoes_genericas.js"></script>
+
+        <!--  Scripts da página-->
+		<script type="text/javascript" src="js/estoque.js"></script>
+
+        <!--Script de acompanhamento do Google Anlytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-99108105-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+
+    </body>
+</html>

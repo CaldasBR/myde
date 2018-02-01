@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	  <title>Quero Marita</title>
+
+		<!-- CSS  -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/media/imagens/favicon_marita.png" type="image/x-icon"/>
+	</head>
+	
+	<body>
+        <div class="navbar-fixed transp">
+			<nav class="brown lighten-2" role="navigation">
+				<div class="nav-wrapper">
+					<a id="logo-container" href="#" class="brand-logo left">
+						<img id="img_logo" src="media/imagens/Marita_logo-1-100x100.png" alt="Quero Marita">
+					</a> 
+                    <ul class="right hide-on-med-and-down">
+						<li class="active"><a href="vendedor.html">Voltar</a></li>
+						<li><a href="login.html">Quero comprar produtos</a></li>
+                    </ul>
+                    				
+					<ul id="nav-mobile" class="side-nav">
+						<li><a href="vendedor.html">Voltar</a></li>
+						<li><a href="login.html">Quero comprar produtos</a></li>
+					</ul>
+                    
+					<a href="" data-activates="nav-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
+				</div>
+			</nav>
+        </div>
+		
+        <br>
+        <!-- DIV INICIO -->
+        <!--style="display: none;"-->
+        <div id="div_inicio" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                            <h5 class="brown-text text-lighten-1 bold">Estamos muito felizes por seu interesse em ser nosso parceiro</h5>
+				
+                            <p class="brown-text text-lighten-1 bold">Nosso objetivo é te ajudar vender mais e que tenhe uma melhor gestão de seu negócio.</p>
+
+                            <p class="brown-text text-lighten-1 bold">Em apenas 3 passos você já está pronto para usufruir de todos os benefícios</p>
+                            <br>
+                            <div class="row center">
+                                <div class="col s12 m6 offset-m3">
+                                    <input id="email" type="email" class="white brown-text validate" placeholder="Digite aqui seu email"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="vendedor.html" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                <a href="javascript:void(0);" onclick="verifica_email();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Continuar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ###### MODAL CADASTRAR ####### -->
+        <div id="div_cadastrar" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+            				<p id="texto_cadastro" class="brown-text text-lighten-1 bold"></p>
+                            <br>
+                            <div class="row center">
+                                <div class="col s12 m6 offset-m3">
+                                    <input id="email_cadastro" type="email" class="white brown-text validate" placeholder="Digite seu email"/>
+                                    <br>
+                                    <input id="nome_completo" type="text" class="white brown-text validate" placeholder="Digite seu nome completo"/>
+                                    <br>
+                                    <input id="celular" type="text" class="white brown-text validate" placeholder="Celular (xx) xxxxx-xxxx" maxlength="15"/>
+                                    <br>
+                                    <input id="cpf" type="text" class="white brown-text validate" placeholder="Digite seu CPF" maxlength="14"/>
+                                    <br>
+                                    <input id="senha_cadastro" type="password" class="white brown-text validate" placeholder="Digite uma senha com pelo menos 8 dígitos"/>
+                                    <input id="id_distribuidor" type="text" class="white brown-text" style="display:none;"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="javascript:void(0);" onclick="voltar_cadastro();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                <a href="javascript:void(0);" onclick="cadastrar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Cadastrar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- DIV CONFIRMAR -->
+        <div id="div_cadastrar_confirmar" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                            <p class="brown-text text-lighten-1 bold">Confirme sua senha</p>
+				            <br>
+                            <div class="row center">
+                                <div class="col s12 m6 offset-m3">
+                                    <input id="confirma_senha" type="password" class="white brown-text validate" placeholder="Digite novamente sua senha"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="javascript:void(0);" onclick="voltar_cadastro_confirmar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                <a href="javascript:void(0);" onclick="cadastrar_confirmar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Confirmar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- DIV LOGAR -->
+        <div id="div_login" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                            <p id="texto_login" class="brown-text text-lighten-1 bold">Você já é cadastrado. Efetue entre com sua senha para prosseguir.</p>
+				            <br>
+                            <div class="row center">
+                                <div class="col s12 m6 offset-m3">
+                                    <input id="email_login" type="email" class="white brown-text validate" placeholder="Digite seu email"/>
+                                    <br>
+                                    <input id="senha_login" type="password" class="white brown-text validate" placeholder="Senha"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="javascript:;" onclick="existe_email();" class="brown-text text-lighten-1 light"><ins>Tenho problemas com o acesso</ins></a>
+                            </div>
+                            <div class="row">
+                                <a href="javascript:void(0);" onclick="voltar_login();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                <a href="javascript:void(0);" onclick="login();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Entrar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ###### É Marita? ####### -->
+        <div id="div_eh_marita" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+				            <h5 class="brown-text text-lighten-1 bold">Você já é um revendedor oficial da Marita e é cadastrado na Refe Fácil Brasil?</h5>
+                            <br>
+                            <div class="row">
+                                <a href="javascript:void(0);" onclick="voltar_marita();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                <a href="javascript:void(0);" onclick="ir_ufs();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Quero ser um revendedor</a>
+                                <a href="javascript:void(0);" onclick="termo();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Já sou um revendedor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- DIV UF -->
+        <div id="div_cadastrar_cidade" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                            <p class="brown-text text-lighten-1 bold">Agora vamos selecionar um distribuidor</p>
+                            <br>
+                            <div class="row center">
+                                <div class="col s12 m6 offset-m3">
+                                    <select id="uf">
+                                        <option value="" disabled selected>Qual sua UF?</option>
+                                            <option value="AC" >AC</option>
+                                            <option value="AL" >AL</option>
+                                            <option value="AM" >AM</option>
+                                            <option value="AP" >AP</option>
+                                            <option value="BA" >BA</option>
+                                            <option value="CE" >CE</option>
+                                            <option value="DF" >DF</option>
+                                            <option value="ES" >ES</option>
+                                            <option value="GO" >GO</option>
+                                            <option value="MA" >MA</option>
+                                            <option value="MG" >MG</option>
+                                            <option value="MS" >MS</option>
+                                            <option value="MT" >MT</option>
+                                            <option value="PA" >PA</option>
+                                            <option value="PB" >PB</option>
+                                            <option value="PE" >PE</option>
+                                            <option value="PI" >PI</option>
+                                            <option value="PR" >PR</option>
+                                            <option value="RJ" >RJ</option>
+                                            <option value="RN" >RN</option>
+                                            <option value="RO" >RO</option>
+                                            <option value="RR" >RR</option>
+                                            <option value="RS" >RS</option>
+                                            <option value="SC" >SC</option>
+                                            <option value="SE" >SE</option>
+                                            <option value="SP" >SP</option>
+                                            <option value="TO" >TO</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="#" onclick="voltar_cadastro_cidade();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                <a href="#" onclick="procurar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Procurar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- DIV SELECIONAR DISTRIBUIDOR -->
+        <div id="div_cadastrar_selecionar" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                            <p>Escolha seu distribuidor:</p>
+                            <div class="row center">
+                                <div id='select_distrib_cadastro' class="col s12 m6 offset-m3">
+                                <!-- conteúdo PHP -->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="#" onclick="voltar_cadastro_selecionar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ###### AVISO REDIRECIONAR MARITA ####### -->
+        <div id="div_aviso_marita" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+                            <p id="texto_login" class="brown-text text-lighten-1 bold">
+                                Faltam poucos passos para você se tornar um revendedor independente e ter acesso às facilidades do queromarita.com.br:
+                            </p>
+                            <p id="texto_login" class="brown-text text-lighten-1 bold">
+                                Faça seu cadastro no redefacil: aperte avançar abaixo para acessar o site da rede fácil e realizar o seu cadastro como revendedor independente autorizado.
+                            </p>
+                            <p id="texto_login" class="brown-text text-lighten-1 bold">
+                                Volte para queromarita e conclua sua adesão ao site de vendas: enviaremos agora mesmo um email com as instruções de como concluir a última etapa para sua adesão. Acesse seu e-mail.
+                            </p>
+                            <input type="text" id="id_distr_selecionado" style="display: none;">
+                            <div class="row">
+                                <a href="javascript:void(0);" onclick="voltar_aviso_marita();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                <a href="javascript:void(0);" onclick="redir_marita();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Avançar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ###### MODAL Termo ###### -->
+        <div id="div_termo" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center-align"><img src="/media/imagens/favicon_marita.png"></div>
+                        <h3 class="center-align" style="color: black">Termos e Condições Gerais de uso do site</h3>
+                        <br>
+                        <h6 class="center-align" style="color: black">Estes Termos e Condições Gerais aplicam-se ao uso dos serviços oferecidos pelo MYDE, empresa devidamente inscrita no CNPJ/MF sob o n° 23.300.336/0001-75, doravante nominada Myde, por meio dos sites www.myde.com.br, www.sejavip.com.br e www.queromarita.com.br.</h6>
+                        <br>
+
+                        <h6 class="center-align" style="color: black">Qualquer pessoa, doravante nominada Usuário, que pretenda utilizar os serviços do QueroMarita / SejaVip deverá aceitar os Termos e Condições Gerais e todas as demais políticas e princípios que o regem.</h6>
+                        <br>
+
+                        <h6 class="center-align" style="color: black">A ACEITAÇÃO DESTES TERMOS E CONDIÇÕES GERAIS É ABSOLUTAMENTE INDISPENSÁVEL À UTILIZAÇÃO DOS SITES E SERVIÇOS PRESTADOS PELA EMPRESA MYDE.</h6>
+                        <br>
+
+                        <h6 class="center-align" style="color: black">O usuário deverá ler, certificar-se de haver entendido e aceitar todas as condições estabelecidas nos Termos e Condições Gerais e nas Políticas de Privacidade, assim como nos demais documentos incorporados aos mesmos por referência, antes de seu cadastro como Usuário da Myde. Em caso de dúvidas, acesse o nosso Portal.</h6>
+                        <br>
+
+                        <h5 class="" style="color: black">01 - Objeto</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Os serviços objeto dos presentes Termos e Condições Gerais consistem em 
+                        (i) ofertar e hospedar espaços nos sites www.myde.com.br, www.sejavip.com.br e www.queromarita.com.br para que os Usuários anunciem à venda seus produtos vinculados à marca anunciada;
+                        (ii) disponibilizar espaço para publicidade e propaganda dos produtos;
+                        (iii) viabilizar o contato direto entre Usuários anunciantes e Usuários interessados em adquirir os produtos anunciados, por meio da divulgação dos dados de contato de uma parte à outra. 
+                        Myde, portanto, possibilita que os Usuários contatem-se e negociem entre si diretamente, sem intervir no contato, na negociação ou na efetivação dos negócios, não sendo, nesta qualidade, fornecedor de quaisquer produtos ou serviços anunciados por seus Usuários nos sites www.myde.com.br, www.sejavip.com.br e www.queromarita.com.br.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">02 - Quem pode se cadastrar</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Os serviços do Myde estão disponíveis apenas para as pessoas que tenham capacidade legal para contratá-los. Não podem utilizá-los, assim, pessoas que não gozem dessa capacidade, inclusive menores de idade, ou pessoas que tenham sido inabilitadas do Myde, temporária ou definitivamente, ficando, desde já, o usuário advertido das sanções legais do Código Civil, notadamente, art. 166, I; 171, I e 180 da lei n° 10.406/02.
+                        Também não é permitido que uma mesma pessoa tenha mais de um cadastro. Se o Myde detectar, através do sistema de verificação de dados, cadastros duplicados, irá inabilitar definitivamente todos os cadastros.
+                        Para efetuar venda de produtos, o vendedor precisa necessariamente ser um distribuidor autorizado e estar cadastrado na empresa fonte que o autoriza a comercializar o produto.
+                        <br>
+                        Apenas será confirmado o cadastramento do interessado que preencher todos os campos do cadastro. O futuro Usuário deverá completá-lo com informações exatas, precisas e verdadeiras, e assume o compromisso de atualizar os Dados Pessoais sempre que neles ocorrer alguma alteração.
+                        Ao se cadastrar no Myde o Usuário poderá utilizar todos os serviços disponibilizados pelas empresas do grupo (incluindo o MercadoPago e parcerias de frete), declarando para tanto ter lido, compreendido e aceitado os respectivos Termos e Condições de uso de cada serviço que passam, por referência, a fazer parte integrante destes Termos e Condições.
+                        <br>
+                        <b>Myde não se responsabiliza pela correção dos Dados Pessoais inseridos por seus Usuários. Os Usuários garantem e respondem, em qualquer caso, civil e criminalmente, pela veracidade, exatidão e autenticidade, dos Dados Pessoais cadastrados.</b>
+                        <br>
+                        Myde se reserva o direito de utilizar todos os meios válidos e possíveis para identificar seus Usuários, bem como de solicitar dados adicionais e documentos que estime serem pertinentes a fim de conferir os Dados Pessoais informados.
+                        Caso o Myde decida checar a veracidade dos dados cadastrais de um Usuário e se constate haver entre eles dados incorretos ou inverídicos, ou ainda caso o Usuário se furte ou se negue a enviar os documentos requeridos, o Myde poderá bloquear o cadastro para vendas, suspender temporariamente ou cancelar definitivamente o cadastro, sem prejuízo de outras medidas que entender necessárias e oportunas.
+                        Havendo a aplicação de quaisquer das sanções acima referidas, automaticamente serão cancelados os anúncios do respectivo Usuário, não lhe assistindo, por essa razão, qualquer sorte de indenização ou ressarcimento.
+                        <br>
+                        O Usuário acessará sua conta através de um login e senha e compromete-se a não informar a terceiros esses dados, responsabilizando-se integralmente pelo uso que deles seja feito.
+                        O Usuário compromete-se a notificar o Myde imediatamente, e através de meio seguro, a respeito de qualquer uso não autorizado de sua conta, bem como o acesso não autorizado por terceiros a mesma. O Usuário será o único responsável pelas operações efetuadas em sua conta, uma vez que o acesso a mesma só será possível mediante a aposição da senha, cujo conhecimento é exclusivo do Usuário.
+                        Em nenhuma hipótese será permitida a cessão, venda, aluguel ou outra forma de transferência da conta. Também não se permitirá a manutenção de mais de um cadastro por uma mesma pessoa, ou ainda a criação de novos cadastros por pessoas cujos cadastros originais tenham sido cancelados por infrações às políticas do Myde.
+                        Também serão eliminados cadastros considerados ofensivos, bem como os que contenham dados pessoais do Usuário ou alguma URL ou endereço eletrônico. O Myde se reserva o direito de recusar qualquer solicitação de cadastro e de cancelar um cadastro previamente aceito, desde que em desacordo com as políticas e regras do presente termo.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">03 - Modificações dos Termos e Condições Gerais</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Myde poderá alterar, a qualquer tempo, estes Termos e Condições Gerais, visando seu aprimoramento e melhoria dos serviços prestados. Os novos Termos e Condições entrarão em vigor 10 dias após publicados no site. No prazo de 5 (cinco) dias contados a partir da publicação das modificações, o Usuário deverá comunicar-se por e-mail caso não concorde com os termos alterados. Nesse caso, o vínculo contratual deixará de existir, desde que não haja contas ou dívidas em aberto. Não havendo manifestação no prazo estipulado, entender-se-á que o Usuário aceitou tacitamente os novos Termos e Condições e o contrato continuará vinculando as partes.
+                        <br>
+                        As alterações não vigorarão em relação a negociações e anúncios já iniciados ao tempo em que as mesmas alterações sejam publicadas. Para estes, os Termos e Condições Gerais de Uso valerão com a redação anterior.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">04 - Produtos anunciados</h5>
+                        <br>
+
+                        <h6 class="" style="color: black"><b>4.1 Anúncios / ofertas</b></h6>
+                        <br>
+
+                        <h6 class="" style="color: black">O Usuário poderá oferecer à venda produtos vinculados a autorização de distribuição da marca do fabricante como carro-chefe e também produtos que complementam o portifolio dos produtos autorizados pelo distribuidor. Os anúncios podem conter gráficos, textos, descrições, fotos e outras informações relevantes do produto ou serviço oferecido, sempre que tal prática não viole nenhum dispositivo deste contrato ou das demais políticas do Myde e do fabricante. O produto ou serviço oferecido pelo Usuário vendedor deve ser descrito com clareza quanto a suas características relevantes. Em caso de regulamentado pelo fabricante, o distribuidor deverá aceitar, através deste termo, que os anuncios e preços podem ser padronizads de acordo com a norma e regulamento do fabricante. Presumir-se-á que, mediante a inclusão do anúncio de um produto, que o usuário manifesta a intenção e declara possuir o direito de vender o produto oferecido, ou que está facultado para tal por seu titular, além de dispor do produto para entrega imediata. No caso de não possuir estoque para entrega, o usuário concorda em disponibillizar ao consumidor a busca por outro distribuidor dentro do site. Os anúncios devem conter, caso necessário, a descrição de todos os impostos incidentes sobre a transação em estrita observância à legislação tributária aplicável. O Usuário declara, também, que ao publicar um anúncio possui em estoque produtos em quantidade suficiente para cumprimento de sua oferta.
+                        <br>
+                        Não é permitido fazer publicidade de outros meios de pagamentos que não sejam expressamente previstos pelo Myde, a fim de explicitar a clareza e lisura dos meios de pagamento oferecidos pelo Myde caso por estes optem as partes contratantes. Caso se infrinja qualquer das disposições previstas nesta cláusula, o Myde poderá editar, solicitar que o Usuário o edite, ou remover o respectivo anúncio, hipótese em que não haverá estorno ou devolução de quantias pagas ou a pagar relativas ao anúncio suprimido.
+                        <br>
+                        Somente é possível anunciar produtos novos no site www.sejavip.com.br, visto que é um site de revendedor de diversas marcas. Já no site queromarita.com.br é determinado que o vendedor aceita a limitação de utilizar um cadastro gerenciado parcialmente pela adminitração do site (como itens dispoíveis no portifolio, por exemplo).
+                        </h6>
+                        <br>                
+
+                        <h6 class="" style="color: black"><b>4.2 Inclusão de imagens e fotografias</b></h6>
+                        <br>
+
+                        <h6 class="" style="color: black">O Usuário pode incluir imagens e fotografias do produto oferecido (no site www.sejavip.com.br) sempre que as mesmas correspondam ao produto.
+                        O Myde poderá retirar do site publicações que contenham imagens que não estejam de acordo com o Termos e Condições de Uso e demais políticas de utilização do site. 
+                        </h6>
+                        <br>
+
+                        <h6 class="" style="color: black"><b>4.3 Produtos Proibidos (no site www.sejavip.com.br).</b></h6>
+                        <br>
+
+                        <h6 class="" style="color: black">Poderão ser anunciados/ofertados aqueles produtos ou serviços cuja venda não esteja expressamente proibida pelos Termos e Condições Gerais e demais políticas do Myde, ou pela lei vigente (no site www.sejavip.com.br).
+                        <br>
+                        <br>
+                        Fica expressamente proibida a venda de armas de fogo, narcóticos, tóxicos e qualquer sorte de drogas ilegais, bem como medicamentos e qualquer tipo de drogas em geral ou produtos aos quais se atribua efeitos terapêuticos de qualquer natureza, propriedade roubada, órgãos humanos, animais, no todo ou em parte, afora os constantes de rol enunciativo publicado em Produtos Proibidos, moedas e cédulas falsificadas, serviços de câmbio não autorizado, exceto venda de moedas antigas, produtos de contrabando, produtos falsificados ou adulterados, pólvora ou material explosivo, ações de empresas negociadas em Bolsa de Valores, bilhetes de loteria, listas de correio ou bases de dados pessoais, serviços e/ou produtos relacionados a prostituição ou similares, material pornográfico, obsceno ou contrário a moral e os bons costumes (salvo os produtos que forem cadastrados na categoria Adultos), quaisquer produtos cuja venda é expressamente proibida pelas leis vigentes, cigarros e outros produtos derivados do tabaco e/ou que façam apologia ao hábito de fumar, produtos que promovam a violência e ou a discriminação baseada em questões de raça, sexo, religião, nacionalidade, orientação sexual ou de qualquer outro tipo.
+                        Também está proibida a venda de CDs que contenham música em formato MP3, quando a mesma não está expressamente autorizada pelo artista ou gravadora proprietária dos direitos autorais, ou infrinja alguma legislação. Também não podem ser cadastrados produtos que violem leis de restrição à pirataria de informática, de proteção de software, direitos do autor, patentes, marcas, modelos e desenhos industriais, nem software para OEM (entende-se como software para OEM, a versão especial do software pré-instalada no disco rígido de computadores pessoais no momento da fabricação, ou quando este for agrupado ao hardware do computador), NFR, cópias e/ou arquivos de backup, licença, programas acadêmicos e/ou desenvolvidos para alguma entidade educacional, ou segredos industriais, ou produtos que exijam do Usuário vendedor direito de venda, ou que somente podem ser vendidos com participação ou autorização de terceiros, e bens embargados ou afetados por alguma restrição de qualquer espécie quanto ao seu uso, exploração ou transferência de domínio ou posse. Fica proibida, ainda, a venda de aparelhos ativos, eletroestimuladores, para utilização em educação física, embelezamento e correção estética, que não estejam devidamente registrados perante a Agência Nacional de Vigilância Sanitária. É responsabilidade exclusiva do Usuário vendedor velar pela legalidade da venda de seus produtos e serviços e o Myde não assume nenhuma responsabilidade pela existência deles no site ou por negociações que não cumpram com as restrições descritas nos Termos e Condições Gerais. 
+                        Se você considera que algum anúncio infringe essa norma, pode denunciá-lo no link 'Denunciar', abaixo dos dados do vendedor.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">05 - Meios de Pagamento</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Ao anunciar um produto, o Usuário deve estar de acordo com a Aceitação da Plataforma MercadoPago, que permite o gerenciamento e a efetivação de pagamentos, pelos Usuários compradores, por diversos meios, tais como cartão de crédito, boleto bancário, transferência bancária online ou envio de dinheiro disponível em conta gráfica, considerando todas as regras e limitações do referido serviço, que podem ser verificados nos Termos e Condições Gerais de uso. Para tanto, o usuário declara ter lido, compreendido e aceitado os Termos e Condições de uso do MercadoPago.
+                        O Usuário vendedor obriga-se ainda a não modificar o preço de venda do bem ou serviço por ele anunciado se o comprador decidir utilizar o MercadoPago.
+                        <b>É proibido o anúncio de outros meios de pagamento além dos enunciados pelo Myde </b> constantes da plataforma MercadoPago na página de cadastramento de anúncios, ressalvada a livre opção do usuário comprador.
+                        Caso o Usuário anunciante infrinja essa norma, o Myde poderá editar o espaço ou suprimir o respectivo anúncio,hipótese em que não haverá estorno das quantias pagas ou faturadas para tal anúncio.
+                        </h6>
+                        <br>
+
+                        <h6 class="" style="color: black"><b>5.1 MercadoEnvios</b></h6>
+                        <br>
+
+                        <h6 class="" style="color: black">O Myde, por meio de contrato celebrado com os CORREIOS - Empresa Brasileira de Correios e Telégrafos -, oferece aos seus Usuários o serviço denominado "MercadoEnvios", conforme Anexo específico constantes na cláusula "18" destes Termos e Condições Gerais de uso do site.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">06 - Política de publicidade</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Antes de os anúncios serem veiculados nos sites do Myde, eles são analisados para garantir que seguem nossas Políticas de Publicidade. Durante o processo de análise do anúncio, verificaremos as imagens, o texto o direcionamento e o posicionamento do anúncio, além do conteúdo na página de destino dele. Seu anúncio poderá não ser aprovado se o conteúdo da página de destino não estiver funcionando totalmente, não corresponder ao produto/serviço promovido no anúncio ou não estiver totalmente de acordo com nossas Políticas de Publicidade. Caso seja reprovado, você poderá editá-lo e reenviá-lo para análise. 
+                        Os anúncios não deverão constituir, facilitar ou promover produtos, serviços ou atividades ilegais. Os anúncios direcionados a menores não deverão promover produtos, serviços ou conteúdos que sejam inapropriados, ilegais ou inseguros, ou que explorem, enganem ou exerçam pressão sobre as faixas etárias direcionadas.
+                        Os anúncios não devem discriminar ou incentivar a discriminação contra pessoas com base em atributos pessoais como raça, etnia, cor, nacionalidade, religião, idade, sexo, orientação sexual, identidade de gênero, situação familiar, deficiência, condição genética ou de saúde.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">07 - Privacidade da Informação</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Toda informação ou dado pessoal prestado pelo Usuário do Myde é armazenada em servidores ou meios magnéticos de alta segurança. Myde tomará todas as medidas possíveis para manter a confidencialidade e a segurança descritas nesta cláusula, porém não responderá por prejuízo que possa ser derivado da violação dessas medidas por parte de terceiros que utilizem as redes públicas ou a internet, subvertendo os sistemas de segurança para acessar as informações de Usuários.
+                        <br>
+                        O Usuário expressamente autoriza que suas informações e dados pessoais sejam compartilhados pelo Myde com as demais empresas integrantes do grupo econômico.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">08 - Obrigações e direitos dos Usuários</h5>
+                        <br>
+
+                        <h6 class="" style="color: black"><b>8.1 Comprador</b></h6>
+                        <br>
+
+                        <h6 class="" style="color: black">Os Usuários interessados em comprar produtos ou contratar serviços anunciados por vendedores no Myde devem manifestar seu interesse e realizar suas ofertas durante o prazo da negociação por estes estipulado. O Usuário comprador, após manifestar interesse na compra de um item anunciado, através das ferramentas do site, obriga-se a contatar o Usuário vendedor e efetivar a transação, salvo se a negociação for proibida por lei ou por estes Termos e Condições Gerais e anexos, ou na hipótese de os Usuários vendedor e comprador desistirem do negócio de comum acordo.
+                        Usuários compradores "sem reputação" ou "com reputação negativa" (de acordo com os "medidores de reputação" utilizados pelo Myde) somente poderão comprar um produto ou contratar um serviço anunciado na plataforma do Myde mediante a utilização dos Serviços de Gerenciamento de Pagamento do MercadoPago.
+                        <br>
+                        Ao manifestar o interesse em algum produto, o Usuário comprador obriga-se a atender às condições de venda descritas no anúncio.
+                        As ofertas só terão validade se realizadas por meio do sistema do Myde.
+                        <br>
+                        Tributos: O Myde não se responsabiliza pelas obrigações tributárias que recaiam nas atividades dos usuários do site. Assim como estabelece a legislação pertinente em vigor, o comprador deverá exigir nota fiscal do vendedor em suas transações, a menos que o Usuário vendedor esteja realizando uma venda eventual e não se enquadre no conceito legal de comerciante/empresário quanto aos bens postos em negociação.
+                        </h6>
+                        <br>
+
+                        <h6 class="" style="color: black"><b>8.2 Obrigações do Usuário vendedor</b></h6>
+                        <br>
+
+                        <h6 class="" style="color: black">O Usuário vendedor deve ter capacidade legal para vender o produto ou prestar o serviço anunciado. O Usuário vendedor obriga-se a entrar em contato com o Usuário comprador para efetivar a transação sempre que tenha recebido uma manifestação de interesse na compra do item anunciado. Apenas nos seguintes casos excepcionais o Usuário vendedor poderá não efetivar a venda: se não houve acordo com o Usuário comprador sobre a forma de pagamento ou prazo de entrega; se não foi possível verificar a verdadeira identidade ou as informações do Usuário comprador; se houve evidente erro de digitação ao cadastrar quantidade do produto.
+                        Todos os vendedores deverão, obrigatoriamente, disponibilizar a seus compradores a opção de utilizar MercadoPago, que permite o gerenciamento e a efetivação de pagamentos por diversos meios, tais como cartão de crédito, boleto bancário, transferência bancária online ou envio de dinheiro disponível em conta gráfica.
+                        O Myde se reserva o direito de requerer, de acordo com os critérios que estime pertinentes, que certos Usuários vendedores somente anunciem seus bens ou serviços no Web Site mediante a utilização dos Serviços de Gerenciamento de Pagamento do MercadoPago e/ou outras ferramentas disponibilizadas pelo Myde para cobrança do bem vendido e das tarifas pela utilização dos serviços, importando eventualmente no pagamento de tarifas aplicáveis pela utilização destes.
+                        <br>
+                        <b>O vendedor está ciente que somente mediante a quitação da mensalidade devida a Myde, estará aquele habitado a efetuar vendas através do site. O Myde cederá uma tolerância de 30 dias adicionais ao vencimento da fatura para acerto de contas as mensalidades atrasadas, tendo o direitor de bloquear as vendas do usuário vendedor até a quitação.</b>
+                        <br>
+                        Em virtude de o Myde não figurar como parte nas transações de compra e venda de serviços e produtos que se realizam entre os Usuários, a responsabilidade por todas as obrigações delas decorrentes, sejam fiscais, trabalhistas, consumeristas ou de qualquer outra natureza, será exclusivamente do Usuário vendedor. Em caso de interpelação judicial que tenha como Réu o Myde, cujos fatos fundem-se em ações do Usuário vendedor, este será chamado ao processo devendo arcar com todos os ônus que daí decorram, nos termos do artigo 70, III do Código de Processo Civil. Por não figurar como parte nas transações de compra e venda que se realizam entre os Usuários, o Myde também não pode obrigar o Usuário vendedor a honrar sua obrigação ou efetivar a negociação.
+                        <br>
+                        <b>O usuário vendedor se responsabiliza pela originalidade do produto vendido, de acordo com as normas estabelecidas pelos órgãos reguladores e fabricantes.</b>
+                        <br>
+                        Tributos: o Myde não se responsabiliza pelas obrigações de natureza tributária que incidam sobre os negócios realizados entre Usuário comprador e Usuário vendedor. Assim, o Usuário vendedor que atue como comerciante, nos termos da lei em vigor, responsabilizar-se-á pela integralidade das obrigações oriundas de suas atividades, notadamente pelos tributos incidentes.
+                        </h6>
+                        <br>
+
+                        <h6 class="" style="color: black"><b>8.3 Direitos que você concede a nós</b></h6>
+                        <br>
+
+                        <h6 class="" style="color: black">Em consideração aos direitos concedidos a você segundo os Acordos, você nos concede o direito (1) de fornecer a você publicidade e outras informações.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">09 - Práticas Vedadas</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Os Usuários não poderão, entre outras atitudes previstas nestes Termos e Condições e seus anexos: a) manipular os preços dos produtos anunciados; b) interferir nas transações entre outros Usuários; c) anunciar produtos proibidos pelas políticas do Myde e a lei; d) agredir, caluniar, injuriar ou difamar outros Usuários; e) adicionar em seus anúncios acréscimos de preço caso o comprador opte por realizar o pagamento pelo MercadoPago.
+                        Estes tipos de comportamento poderão ser sancionados com a suspensão ou cancelamento do anúncio, ou com a suspensão ou cancelamento do seu cadastro como usuário do Myde, sem prejuízo das ações legais que possam ocorrer pela configuração de delitos ou contravenções ou os prejuízos civis que possam causar aos Usuários compradores.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">10 - Violação no Sistema ou da Base de Dados</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Não é permitida a utilização de nenhum dispositivo, software ou outro recurso que venha a interferir nas atividades e operações do Myde, bem como nos anúncios, descrições, contas ou seus bancos de dados. Qualquer intromissão, tentativa de, ou atividade que viole ou contrarie as leis de direito de propriedade intelectual e/ou as proibições estipuladas nestes Termos e Condições Gerais, tornarão o responsável passível das ações legais pertinentes, bem como das sanções aqui previstas, sendo ainda responsável pelas indenizações por eventuais danos causados.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">11 - Sanções</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Sem prejuízo de outras medidas, o Myde poderá advertir, suspender ou cancelar, temporária ou definitivamente o cadastro de um usuário, seus anúncios ou aplicar uma sanção que impacte negativamente em sua reputação, a qualquer tempo, iniciando as ações legais cabíveis e/ou suspendendo a prestação de seus serviços se: a) o Usuário não cumprir qualquer dispositivo destes Termos e Condições Gerais e demais políticas do Myde; b) se descumprir com seus deveres de Usuário; c) se praticar atos fraudulentos ou dolosos; d) se não puder ser verificada a identidade do Usuário ou qualquer informação fornecida por ele esteja incorreta; e) se o Myde entender que os anúncios ou qualquer atitude do Usuário tenham causado algum dano a terceiros ou ao próprio Myde ou tenham a potencialidade de assim o fazer. Nos casos de inabilitação do cadastro do Usuário, todos os anúncios ativos e/ou ofertas realizadas serão automaticamente cancelados.
+                        O Myde reserva-se o direito de, a qualquer momento e a seu exclusivo critério, solicitar o envio de documentação pessoal e/ou exigir que um usuário torne-se Certificado.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">12 - Responsabilidades</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">O Myde se responsabiliza exclusivamente à prestação do seu serviço de hospedagem e veiculação de anúncios nos sites www.sejavip.com.br e www.queromarita.com.br. Esclareça-se, por oportuno, que o Myde não se responsabiliza por vícios ou defeitos técnicos e/ou operacionais oriundos do sistema do usuário ou de terceiros.
+                        O Myde não é o proprietário dos produtos, não guarda a posse desses itens e não realiza as ofertas de venda. Tampouco intervém na entrega dos produtos ou na prestação dos serviços anunciados pelos Usuários nos sites www.sejavip.com.br e www.queromarita.com.br, a não ser que seja escolhido como uma das opções de distribuidor de produto.
+                        O Myde não se responsabiliza, por conseguinte, pela existência, quantidade, qualidade, estado, integridade ou legitimidade dos produtos oferecidos, adquiridos ou alienados pelos Usuários, assim como pela capacidade para contratar dos Usuários ou pela veracidade dos Dados Pessoais por eles inseridos em seus cadastros. O Myde não outorga garantia por vícios ocultos ou aparentes nas negociações entre os Usuários. Cada Usuário conhece e aceita ser o único responsável pelos produtos que anuncia ou pelas ofertas que realiza.
+                        <br>
+                        O Myde não será responsável pelo efetivo cumprimento das obrigações assumidas pelos Usuários. O Usuário reconhece e aceita que ao realizar negociações com outros Usuários ou terceiros faz por sua conta e risco, reconhecendo o Myde como mero fornecedor de serviços de disponibilização de espaço virtual para anúncio dos produtos e serviços ofertados por terceiros. Em nenhum caso o Myde será responsável pelo lucro cessante ou por qualquer outro dano e/ou prejuízo que o Usuário possa sofrer devido às negociações realizadas ou não realizadas através do Myde decorrentes da conduta de outros Usuários.
+                        <br>
+                        Nos casos em que um ou mais Usuários ou algum terceiro inicie qualquer tipo de reclamação ou ação legal contra outro ou outros Usuários, todos e cada um dos Usuários envolvidos nas reclamações ou ações eximem de toda responsabilidade o Myde e os seus diretores, gerentes, empregados, agentes, operários, representantes e procuradores.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">13 - Serviços</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Estes Termos e Condições Gerais não geram nenhum contrato de sociedade, de mandato, franquia ou relação de trabalho entre Myde e o Usuário. O Usuário manifesta ciência de que Myde não é parte de nenhuma transação realizada entre Usuários, nem possui controle algum sobre a qualidade, segurança ou legalidade dos produtos ou serviços anunciados pelos Usuários, sobre a veracidade ou exatidão dos anúncios elaborados pelos Usuários, e sobre a capacidade dos Usuários para negociar. O Myde não pode assegurar o êxito de qualquer transação realizada entre Usuários, tampouco verificar a identidade ou os dados pessoais dos usuários. O Myde não garante a veracidade da publicação de terceiros que apareça em seu site e não será responsável pela correspondência ou contratos que o Usuário realize com terceiros.
+                        </h6>
+                        <br>
+
+                        <h6 class="" style="color: black"><b>13.1 Limitações e modificações do Serviço</b>
+                        </h6>
+                        <br>
+
+                        <h6 class="" style="color: black">O Myde empreenderá esforços razoáveis para manter o Serviço Myde operacional. No entanto, determinadas dificuldades técnicas ou manutenção poderão, de tempos em tempos, resultar em interrupções temporárias. Na medida do permitido segundo a lei aplicável, o Myde reserva o direito, periodicamente e a qualquer momento, de modificar ou descontinuar, temporária ou permanentemente, funções e recursos do Serviço Myde. Não obstante, se você tiver tarifas pré-pagas para Assinaturas Pagas que o Myde descontinuar permanentemente antes do final do Período pago, o Myde reembolsará você pelas tarifas pré-pagas após tal descontinuação. Você compreende, concorda e aceita que o Myde não tem obrigação de manter, apoiar, fazer upgrade ou atualizar o Serviço, ou de fornecer todo ou qualquer conteúdo específico por meio do Serviço. 
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">14 - Falhas no Sistema</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">O Myde não se responsabiliza por qualquer dano, prejuízo ou perda sofridos pelo Usuário em razão de falhas na internet, no sistema ou no servidor utilizados pelo Usuário, decorrentes de condutas de terceiros, caso fortuito ou força maior. O Myde também não será responsável por qualquer vírus que possa atacar o equipamento do Usuário em decorrência do acesso, utilização ou navegação na internet ou como conseqüência da transferência de dados, arquivos, imagens, textos ou áudio.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">15 - Tarifas e Faturamento</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">O Cadastro no Myde é gratuito. A utilização do espaço para publicidade gera um custo mensal , anunciado no site , ao distribuidor autorizado optante deste serviço. O Myde poderá a qualquer momento fazer alteração dos preços , sem prévio aviso, facultado a estratégia da empresa de anunciar ou não o reajuste.
+                        <br>
+                        O usuário vendedor concorda com a classificação tributária na cobrança da mensalidade pelo serviço prestado de publicidade e propaganda, de acordo com CNAE informado pelo Myde no momento da assinatura dos serviços.
+                        <br>
+                        O Usuário concorda em pagar ao Myde os valores correspondentes pelas tarifas de anúncio,  ou qualquer outro serviço prestado pelo Myde em que haja uma tarifa estabelecida. Myde se reserva o direito de modificar, aumentar ou eliminar tarifas vigentes a qualquer momento, sempre notificando os usuários na forma estipulada na cláusula 4 ou durante promoções e outras formas transitórias de alteração dos preços praticados. Tais alterações não vigorarão em relação a negociações e anúncios já iniciados ao tempo em que as mesmas alterações sejam publicadas. Para estes, os Termos e Condições Gerais de Uso valerão com a redação anterior.
+                        <br>  
+                        Myde se reserva o direito de tomar as medidas judiciais e extrajudiciais pertinentes para receber os valores devidos.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">16 - Sistema de reputação</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">O Usuário conta com um sistema para qualificar a sua contraparte, de acordo com as negociações entre eles realizadas. O sistema de reputação é atualizado periodicamente, de acordo com as qualificações inseridas pelos Usuários. Esta é uma importante ferramenta e representa a liberdade de expressão do Usuário na plataforma do Myde, podendo se manifestar sobre a relação de compra e venda ocorrida.
+                        <br>
+                        Os Usuários compradores e os Usuários vendedores devem inserir uma qualificação informando sobre a concretização ou não da negociação e acrescentando um comentário que fundamente e/ou justifique o tipo de qualificação inserida (positiva, neutra ou negativa), assumindo responsabilidade integral pelo que ali escreverem. O Myde não verifica a veracidade ou exatidão das qualificações, comentários ou réplicas e NÃO se responsabiliza pelo que foi inserido pelos Usuários em decorrência das negociações realizadas ou por qualquer comentário expresso no site ou através de qualquer outro meio, incluindo correio eletrônico. O Myde se reserva o direito de eliminar os comentários que considere inadequados,  ofensivos ou contrários às regras do site.Ainda, o Myde poderá eliminar as opiniões e/ou os comentários sobre um Usuário quando exista uma ordem judicial, administrativa ou de autoridade competente que justifique a alteração.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">17 - Propriedade Intelectual</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">O uso comercial da expressão "Myde", “queromarita” e “sejavip” como marca, nome empresarial ou nome de domínio, bem como os conteúdos das telas relativas aos serviços do Myde assim como os programas, bancos de dados, redes, arquivos que permitem que o Usuário acesse e use sua Conta são propriedade do Myde e estão protegidos pelas leis e tratados internacionais de direito autoral, marcas, patentes, modelos e desenhos industriais. O uso indevido e a reprodução total ou parcial dos referidos conteúdos são proibidos, salvo a autorização expressa do Myde.
+                        <br>
+                        O site pode linkar outros sites da rede, o que não significa que esses sites sejam de propriedade ou operados pelo Myde. Não possuindo controle sobre esses sites, Myde não será responsável pelos conteúdos, práticas e serviços ofertados nos mesmos. A presença de links para outros sites não implica relação de sociedade, de supervisão, de cumplicidade ou solidariedade do Myde para com esses sites e seus conteúdos.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">18 - Indenização</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">O Usuário indenizará Myde, suas filiais, empresas controladas ou controladoras, diretores, administradores, colaboradores, representantes e empregados por qualquer demanda promovida por outros usuários ou terceiros decorrentes de suas atividades no site ou por seu descumprimento dos Termos e Condições Gerais de Uso e demais políticas do Myde, ou pela violação de qualquer lei ou direitos de terceiros, incluindo honorários de advogados.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">19 - Suporte ao Cliente</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Para obter informações sobre suporte ao cliente com perguntas relacionadas a contas e a pagamentos, envie uma mensagem através do formulário do site  (xxxx) ou através do chat ao nosso departamento de atendimento ao cliente. Empreenderemos esforços razoáveis para responder a todas as Perguntas de Suporte ao Cliente em um período razoável, mas não fornecemos garantias de qualquer tipo de que as Perguntas de Suporte ao Cliente serão respondidas dentro de qualquer período específico e/ou de que poderemos responder satisfatoriamente a tais perguntas.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">20 - Vigência e término</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Os Acordos continuarão se aplicando a você até que sejam encerrados por você ou pelo Myde. O Myde poderá encerrar os Acordos ou suspender seu acesso ao Serviço Myde a qualquer momento, incluindo no caso do seu uso não autorizado real ou suspeito do Serviço e/ou Conteúdo Myde, ou da não conformidade com os Acordos. Se você ou o Myde encerrar os Acordos, ou se o Myde suspender seu acesso ao Serviço Myde, você concordará que o Myde não deverá ter nenhuma responsabilidade com relação a você e que o Myde não reembolsará nenhum valor que já tenha sido pago, na medida máxima permitida segundo a lei aplicável. Para saber como encerrar sua conta do Myde, entre em contato conosco por meio do formulário de contato de Atendimento ao Cliente que está disponível em nossa página. Esta seção estará em vigor até a medida permitida pela lei aplicável. Você poderá encerrar os Acordos a qualquer momento.
+                        </h6>
+                        <br>
+
+                        <h5 class="" style="color: black">21 - Entre em contato conosco</h5>
+                        <br>
+
+                        <h6 class="" style="color: black">Se você tiver dúvidas relacionadas ao Serviço Myde ou aos Acordos, entre em contato com o atendimento ao cliente do Myde ao acessar a seção Duvidas do nosso site.
+                        </h6>
+                        <br>
+
+                        <h5 class="center-align" style="color: black">
+                            <i>powered by</i>
+                            <img src="media/imagens/logo-myde.png" style="height: 90px; width:90px; position: relative; top:30px;">
+                        </h5>
+
+                        <h6 class="center-align" style="color: black">Direitos reservados</h6>
+                    </div>    
+                
+                    <div class="center-align row">
+                        <a href="javascript:void(0);" onclick="voltar_termo();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                        <a href="javascript:void(0);" onclick="termo_ok();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Aceito os termos</a>
+                    </div>
+                    
+                </div>
+            </div>            
+        </div>  
+        
+        <!-- ###### AVISO INFORMAÇÃO AUTORIZAÇÃO ####### -->
+        <div id="div_inf_autorizacao" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+				            <h5 class="brown-text text-lighten-1 bold">Você precisa de uma conta no Mercado Pago para o próximo passo.</h5>
+                            <p id="texto_login" class="brown-text text-lighten-1 bold">Você não tem uma conta no Mercado pago? Não se preocupe é bem fácil, <a style="color: orange" href="javascript:void(0)" onclick="redir_cadastro_mercpag();">clique aqui para criar.</a></p>
+				            <p id="texto_login" class="brown-text text-lighten-1 bold">Você já tem uma conta? Basta continuar.</p>
+                            <div class="row">
+                                <a href="javascript:void(0);" onclick="voltar_autoriza();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                <a href="javascript:void(0);" onclick="autorizar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Já possuo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ###### AVISO INFORMAÇÃO AUTORIZAÇÃO ####### -->
+        <div id="div_inf_autorizacao2" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+				            <h5 class="brown-text text-lighten-1 bold">Você precisa de uma conta no Mercado Pago para o próximo passo.</h5>
+                            <p id="texto_login" class="brown-text text-lighten-1 bold">Você não tem uma conta no Mercado pago? Não se preocupe é bem fácil, <a style="color: orange" href="javascript:void(0)" onclick="redir_cadastro_mercpag();">clique aqui para criar.</a></p>
+				            <p id="texto_login" class="brown-text text-lighten-1 bold">Você já tem uma conta? Basta continuar.</p>
+                            <div class="row">
+                                <a href="javascript:void(0);" onclick="voltar_autoriza2();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                <a href="javascript:void(0);" onclick="autorizar();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Já possuo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ###### AVISO VINCULAR CONTA ####### -->
+        <div id="div_vincular" class="container s12 m12" style="display: none;">
+            <div class="card-panel teal white">
+                <div class="col m6 offset-m3 s12">
+                    <div class="row fonte_form">
+                        <div class="center">
+                            <img src="media/imagens/Marita_logo-1-100x100.png" class="">
+				            <h5 class="brown-text text-lighten-1 bold">Você está no segundo passo.</h5>
+                            <p id="texto_login" class="brown-text text-lighten-1 bold">Agora iremos vincular sua conta do Mercado Pago com nosso Site.</p>
+				            <p id="texto_login" class="brown-text text-lighten-1 bold">Assim toda a venda que você efetuar já será autoaticamente creditada em sua conta do MercadoPago.</p>
+                            <div class="row">
+                                <a href="javascript:void(0);" onclick="voltar_vincular();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Voltar</a>
+                                <a href="javascript:void(0);" onclick="vincular();" class="waves-effect waves-light orange darken-4 btn-flat white-text">Vincular</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+		<footer id="rodape" class="page-footer brown lighten-2">
+			
+		</footer>
+	
+	
+		<!--  Scripts Padrão-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/bibliotecaAjax.js"></script>
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+		<script type="text/javascript" src="js/funcoes_genericas.js"></script>
+        
+        <!--  Scripts da página-->
+		<script type="text/javascript" src="js/adesao.js"></script>
+        
+        <!--Script de acompanhamento do Google Anlytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-99108105-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+        
+	</body>
+</html>

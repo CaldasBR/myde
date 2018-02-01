@@ -1,0 +1,4 @@
+
+*.log
+makebit/lg_insert_cotacao.log
+makebit/lg_insert_markets.log

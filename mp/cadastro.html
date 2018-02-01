@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <script type="text/javascript" src="js/protege_pagina.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Quero Marita</title>
+
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/media/imagens/favicon_marita.png" type="image/x-icon"/>
+
+        <!-- Plugin WaitMe para mostrar "carregando" em alguma ação -->
+		<link type="text/css" rel="stylesheet" href="css/waitMe.css">
+
+        <!-- Mercado Pago -->
+        <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+
+        <!-- Hotjar Tracking Code for queromarita.com.br -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:543281,hjsv:5};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+
+    <body>
+        <div class="navbar-fixed transp">
+			<nav id="barra_menu" class="brown lighten-2">
+
+            </nav>
+		</div>
+
+
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs brown lighten-5 bold">
+                    <li class="tab col s6"><a class="active teal-text text-lighten-2" href="#tab1">Dados Cadastrais</a></li>
+                    <li class="tab col s6"><a href="#tab2" class="teal-text text-lighten-2">Alterar Senha</a></li>
+                </ul>
+            </div>
+            <!-- Modal Loading -->
+			<div id="wait">
+				<div id="wait-conteudo">
+
+				</div>
+			</div>
+            <!-- Breadcrumb -->
+            <br>
+            <div id="faixa_bread" class="col s12 brown-text text-darken-3">
+            </div>
+            <br>
+
+            <div id="tab1" class="col s12">
+
+                <!--
+                <div class="row">
+                    <a class="bt_finalizar waves-effect waves-light btn orange darken-4" href="javascript:void(0);" onclick="atualiza_cadastro();">Salvar</a>
+                </div>
+                -->
+
+                <div class="row">
+                    <div class="col s12">
+                        <div class="row">
+                            <div class="col m6 offset-m3 s12">
+                                <div class="card-panel teal white">
+                                    <!--margin: -15px 0 0 0; padding: 0 0 0 0;-->
+                                    <div class="brown lighten-2 valign-wrapper center cadastro_title">
+                                        <h6 class="valign white-text" style=" margin: 0 auto;">Dados Pessoais</h6>
+                                    </div>
+                                    <br>
+                                    <div class="container fonte_form">
+                                        <div class="center-align">
+                                            <img id="img_perfil" alt="" src="">
+                                        </div>
+
+                                        <form id="troca_foto" method="post" action="bg_upload.php?fn=img_perfil" enctype="multipart/form-data">
+                                            <div class="file-field input-field" style="margin-bottom: 30px;">
+                                                <div class="btn" style="font-size: small; width: 100%">
+                                                    <span>Selecionar foto</span>
+                                                    <input type="file" name="arquivo" id="arquivo">
+                                                </div>
+
+                                                <br>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" placeholder="Selecione">
+                                                </div>
+                                                <!--<input type="submit" value="Importar"/>-->
+                                            </div>
+                                            <a href="javascript:void(0);" class="waves-effect waves-light btn-flat orange darken-4 white-text" onClick="salvar_foto();">Salvar Foto</a>
+                                        </form>
+
+                                        <br>
+                                        <br>
+                                        <label for="cad_nome_completo">Nome Completo</label>
+                                        <input id="cad_nome_completo" type="text"/>
+
+                                        <label for="cad_login">Email de login</label>
+                                        <p id="cad_login"></p>
+
+                                        <label for="cad_cpf">CPF</label>
+                                        <p id="cad_cpf"></p>
+
+                                        <label for="cad_celular">Celular</label>
+                                        <input id="cad_celular" type="text" maxlength="15" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col m6 offset-m3 s12">
+                                <div class="row fonte_form">
+                                    <div class="card-panel teal white">
+                                        <div class="brown lighten-2 valign-wrapper center cadastro_title">
+                                            <h6 class="valign white-text" style=" margin: 0 auto;">Endereço</h6>
+                                        </div>
+                                        <br>
+
+                                        <div class="container fonte_form">
+                                            <label for="cad_cep">CEP</label><br>
+                                            <input id="cad_cep" type="text" onkeypress="mascara(this, '#####-###')" maxlength="9"/>
+
+                                            <div class="input-field col s12">
+                                                <select id="cad_uf">
+                                                    <option value="" disabled selected>Ecolha uma opção</option>
+                                                    <option value="AC" >AC</option>
+                                                    <option value="AL" >AL</option>
+                                                    <option value="AM" >AM</option>
+                                                    <option value="AP" >AP</option>
+                                                    <option value="BA" >BA</option>
+                                                    <option value="CE" >CE</option>
+                                                    <option value="DF" >DF</option>
+                                                    <option value="ES" >ES</option>
+                                                    <option value="GO" >GO</option>
+                                                    <option value="MA" >MA</option>
+                                                    <option value="MG" >MG</option>
+                                                    <option value="MS" >MS</option>
+                                                    <option value="MT" >MT</option>
+                                                    <option value="PA" >PA</option>
+                                                    <option value="PB" >PB</option>
+                                                    <option value="PE" >PE</option>
+                                                    <option value="PI" >PI</option>
+                                                    <option value="PR" >PR</option>
+                                                    <option value="RJ" >RJ</option>
+                                                    <option value="RN" >RN</option>
+                                                    <option value="RO" >RO</option>
+                                                    <option value="RR" >RR</option>
+                                                    <option value="RS" >RS</option>
+                                                    <option value="SC" >SC</option>
+                                                    <option value="SE" >SE</option>
+                                                    <option value="SP" >SP</option>
+                                                    <option value="TO" >TO</option>
+                                                </select>
+                                                <label>Estado</label>
+                                            </div>
+                                            <br>
+
+                                            <label for="cad_cidade">Cidade</label><br>
+                                            <input id="cad_cidade" type="text"/>
+
+                                            <label for="cad_bairro">Bairro</label><br>
+                                            <input id="cad_bairro" type="text"/>
+
+                                            <label for="cad_endereco">Endereço (Rua, Alameda, Avenida, etc) </label>
+                                            <input id="cad_endereco" type="text"/>
+
+                                            <label for="cad_endereco_numero">Número</label>
+                                            <input id="cad_endereco_numero" type="text"/>
+
+                                            <label for="cad_endereco_compl">Complemento</label>
+                                            <input id="cad_endereco_compl" type="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="painel_midia" style="display:none;" class="col s12 m6 offset-m3 fonte_form">
+                                <div class="row">
+                                    <div class="card-panel teal white">
+                                        <!--margin: -15px 0 0 0; padding: 0 0 0 0;-->
+                                        <div class="brown lighten-2 valign-wrapper center cadastro_title">
+                                            <h6 class="valign white-text" style=" margin: 0 auto;">Mídia</h6>
+                                        </div>
+                                        <br>
+                                        <div class="container fonte_form">
+                                            <div class="row">
+                                                <label for="cad_face">Endereço do Facebook</label>
+                                                <input id="cad_face" type="text"/>
+                                            </div>
+
+                                            <div class="row">
+                                                <label for="cad_txt_pub">Texto de apresentação</label>
+                                                <textarea id="cad_txt_pub" class="materialize-textarea" data-length="220"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row center-align" style="margin-top: -21px;">
+                    <a class="bt_finalizar waves-effect waves-light btn orange darken-4" href="javascript:void(0);" onclick="atualiza_cadastro();">Salvar</a>
+                </div>
+            </div>
+            <div id="tab2" class="col s12 m6 offset-m3">
+
+                <!--
+                <div class="row">
+                        <a class="bt_finalizar right waves-effect waves-light btn orange darken-4" href="javascript:void(0);" onclick="atualiza_senha();">Salvar</a>
+                </div>
+                -->
+
+                <div class="card-panel teal white">
+                    <div class="container fonte_form">
+                        <label for="senha_atual">Senha atual</label>
+                        <input id="senha_atual" type="password"/>
+
+                        <label for="senha_nova">Nova Senha</label>
+                        <input id="senha_nova" type="password"/>
+
+                        <label for="senha_confirm">Confirme a nova senha</label>
+                        <input id="senha_confirm" type="password"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <a class="bt_finalizar waves-effect waves-light btn orange darken-4" href="javascript:void(0);" onclick="atualiza_senha();">Salvar</a>
+                </div>
+            </div>
+        </div>
+
+        <footer id="rodape" class="page-footer brown lighten-2">
+
+		</footer>
+
+        		<!--  Scripts Padrão-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/bibliotecaAjax.js"></script>
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+		<script type="text/javascript" src="js/funcoes_genericas.js"></script>
+        <script src="js/waitMe.js"></script>
+
+        <!--  Scripts da página-->
+		<script type="text/javascript" src="js/cadastro.js"></script>
+
+        <!--Script de acompanhamento do Google Anlytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-99108105-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>

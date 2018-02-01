@@ -1,0 +1,1034 @@
+/*##### footer qualquer #####*/
+
+* html #footer{
+	position:absolute;
+}
+
+.bt_laranja{
+	color:#f18a40;
+}
+.bt_branco{
+	color:#ffffff;
+}
+
+/*##### header qualquer #####*/
+
+.header {		
+	top:0;
+	left: 0px;
+	position:fixed;
+	width:100%;
+	padding:0em;
+	height: 50px;
+	z-index:2;
+}
+
+* html #header{
+	position:absolute;
+}
+
+
+.texto_header{
+	font-size:20px;
+}
+
+
+
+.anuncios{
+	padding:3px; 
+	background-color:; 
+	width: 97%	
+}
+
+
+.logo_hello{   /*##logo##*/
+	border-radius: 15px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding:2px; 
+	width: 100%;
+
+	}
+	
+.box_foto{
+	width:148px; 
+	height:148px;
+	border-color:white;
+	border-width:2px;
+}
+
+
+.anuncio_unico{
+	background-color:lightgray; 
+	display:inline-block;
+	max-width: ;
+	max-height: ;
+	margin-bottom:0px;
+	float:left;
+	border-radius: 10px 10px 10px 10px;
+	width:150px; 
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	
+}
+
+.anuncio_unico_titulo{
+	margin:0px; 
+	margin-top:0px; 
+	font-size:12px;
+	color:grey;
+	background-color:#f5f5f5;
+	margin-bottom:10px;
+	max-width: 100%;
+	margin-left:1%;
+	border-radius: 10px 10px 0px 0px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.anuncio_unico_preco{
+	margin:0px; 
+	margin-top:-10px; 
+	font-size:18px;
+	color:grey;
+	background-color:#f5f5f5;
+	margin-bottom:10px;
+	max-width:c100%;
+	margin-left: 2px;
+	margin-right: 2px;
+	
+}
+
+.anuncio_unico_parcelamento{
+	margin:0px; 
+	margin-top:-10px; 
+	font-size:15px;
+	color:black;
+	background-color:#f5f5f5;
+	margin-bottom:10px;
+	font-weight: bold;
+	max-width: 100%;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-radius: 0px 0px 10px 10px;
+	
+}
+
+.card-panel{
+	box-shadow: 0 0px 0px 0 rgba(0,0,0,0.16),0 0px 0px 0 rgba(0,0,0,0.12);
+}
+
+
+.message_localizacao{   
+	color: gray;
+	margin-top:4%;
+	font-size:1em;
+}
+
+
+.titulo_anuncio{   
+	color: black;
+	margin-top:-2%;
+	font-size:1.5em;
+	margin-bottom:4em;
+}
+
+.titulo_anuncio_produto{   
+	color: black;
+	margin-top:-2%;
+	font-size:1.5em;
+	margin-bottom:;
+}
+
+.pop_up_cadastro{
+	width: 90%;
+	margin: auto;
+	/*background-color: salmon;*/
+	border-radius: 15px;
+	color:white;
+	margin-top: 45px;
+	margin-bottom:70px;
+	margin-bottom: ;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pop_up_cadastro_titulos{
+	color:white;
+	padding:20px;
+}
+
+.pop_up_carrinho{
+	width: 90%;
+	margin: auto;
+	background-color: lightblue;
+	border-radius: 15px;
+	color:white;
+	margin-top: 45px;
+	margin-bottom:70px;
+	margin-bottom: ;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pop_up_carrinho_titulos{
+	color:white;
+	padding:20px;
+}
+
+.titulo_grupo_carrinho{   
+	color: black;
+	margin-top:;
+	font-size:1.5em;
+	margin-bottom:;
+}
+
+.descricao_anuncio_preco{
+	color:black;
+	font-size: 20px;
+}
+
+.descricao_volume{
+	color:black;
+	
+}
+
+.descricao_volume_titulo{
+	color:blue;
+	
+}
+
+.descricao_volume_quantidade{
+	color:blue;
+	
+}
+
+.carrinho_cancelar{
+	color:red;
+}
+
+.carrinho_change{
+	color:blue;
+}
+
+.notificacoes_avatar{
+	word-wrap: break-word;
+}
+
+.modal-content_notificacoes{
+	padding: 2px;
+}
+
+
+.hello{   /*##mensagem##*/
+	color: #006bb5;
+}
+
+.hello_message{   /*##mensagem##*/
+	color: gray;
+	margin-top:3%;
+	font-size:1.3em;
+}
+
+.hello_message_localizacao{   /*##mensagem##*/
+	color: lightgray;
+	margin-top:4%;
+	font-size:1em;
+}
+
+.hello_reticencias{   /*##mensagem##*/
+	color: lightblue;
+	margin-top:-1%;
+	margin-bottom:1%;
+	font-size:4em;
+}
+
+.hello_entrar{   /*##mensagem##*/
+	color: lightblue;
+	margin-top:3%;
+	font-size:1.3em;
+}
+
+.anuncio_title{
+	position: absolute;
+    margin-top: 0%;
+    font-size: 0.8em;
+    margin-left: 0.5%;
+    color: grey;
+}
+
+/*##menu##*/
+.wrapper {
+  width: 100%;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: ;
+  background-color: #ffffff;
+  margin-top:1.5em;
+  line-height:-1px;
+  padding-bottom:0px;
+  padding-top:0px;
+  }
+  
+  
+  /*##menu##*/
+  .menu{                
+	width: 2em;
+	height: 2em;
+	border-radius:15em;
+	border-color: #c6c6c6;
+	margin-right:3px;
+	border-radius:15em;
+	display: inline;
+	margin-top:0.1em;
+	margin-bottom: -0.3em;
+	}
+  
+  .card.small {
+    height: 200px;
+}
+  
+.mini_foto_grupo{                
+	width: 2em;
+	height: 2em;
+	border-radius:15em;
+	border-color: #c6c6c6;
+	margin-right:3px;
+	border-radius:15em;
+	display: inline;
+	margin-top:0.1em;
+	margin-bottom: -0.3em;
+}
+
+
+
+html, body{
+ height:100%; /* aqui definimos que o html e o body terão altura de 100% */
+}
+
+.tamanho_total_pagina{
+	width:100%;
+	height:auto;
+	min-height:100%; /* aqui é onde acontece a mágica, a propriedade height:auto e min-height: 100% fará com que esta div ocupe sempre a altura total do navegador, mesmo quando redimensionado */
+	background:blue;
+}
+
+
+
+/*##### especifico tela de acesso #####*/
+
+
+.titulo_login{
+line-height: 110%;
+position: relative;
+margin-top: 0px;
+font-size: 1.5rem;
+top: auto;
+left: auto;
+text-align: center;
+
+}
+
+.imagem_voltar_tela{
+	position: absolute;
+	margin-left:15px;
+	line-height:57px;
+}
+
+.imagem_logo_esquerdo{
+	position: absolute;
+	margin-left:5px;
+	line-height:57px;
+}
+
+.envelope{
+	float:right;
+	margin-top:-0.1em;
+	margin-right:0.3em;
+}
+
+.menu{
+	float:right;
+	margin-top:-0.0em;
+	margin-right:0.5em;
+	position:relative;
+}
+
+
+
+/*##### inicio #####*/
+
+
+.text_footer{
+	margin-top: 1em;
+	padding: 0px;
+	font-size:0.9em;
+}
+
+
+.bubble_message{
+	position: relative;
+    color: #006bb5;
+	font-size: 13px;
+	margin-bottom: -1.7em;
+	display: block;
+}
+
+.data_message{
+	position: relative;
+	margin-top: ;
+	display: block;
+	font-size: 0.8em;
+	color: lightgray;
+	margin-left: ;
+}
+
+.input[type=text].valid, {
+    border-bottom: 1px solid #4CAF50;
+    box-shadow: 0 1px 0 0 #4CAF50;
+}
+
+
+.collection{   /*##avatar box##*/
+	border: 0px;	
+}
+
+
+.collection .collection-item.avatar{   /*##avatar box##*/
+	min-height: 70px;	
+	padding-left: 50px;
+}
+
+.collection .collection-item.avatar .title{   /*##avatar box nome da pessoa##*/
+	color: black;	
+	
+}
+
+.collection .collection-item.avatar p{   /*##avatar box local ou segunda mensagem##*/
+	color: gray;	
+	
+}
+
+.collection .collection-item.avatar .circle{
+	left: 0px;
+}
+
+.collection .collection-item.avatar .secondary-content {
+    right: 0px;
+	
+}
+
+
+.chip{
+	height: 25px;
+	line-height: 25px;
+	padding: 0 9px;
+	
+}
+
+.chip2{
+	height: 20px;
+	line-height: 20px;
+	font-size: 10px;
+	padding: 0 7px;
+	border-radius: 16px;
+}
+
+/*##### conversa #####*/	
+	
+.foto_pequena_conversa{
+	float:right;
+	margin-top:0.7em;
+	margin-right:1em;	
+	height: 30px;
+	border-radius: 100%;
+	width: 30px;
+}
+
+.clipboard{
+	float:right;
+	margin-top:1em;
+	margin-right:1em;	
+	height: 20px;
+	border-radius: 0%;
+	width: 20px;
+}
+
+.text_footer_conversa{
+	margin-top: 1em;
+	padding: 0px;
+	font-size:0.9em;
+	height:100%;
+}
+
+
+
+.row .col{
+	padding: 0rem;
+}
+
+	
+/*##### todas telas #####*/
+
+.btn {
+	box-shadow:none;
+	text-transform: none;
+}
+
+.btn i{
+	font-size: ;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.secondary-content {
+    color: #006bb5;
+}
+
+
+/*#### baloes de conversas ####*/
+
+
+
+.box-comentario {
+    width: 100%;
+    min-height: 20px;
+	display: inline-block;
+	margin-bottom:-30px;
+	margin-top:15px;
+}
+ 
+.box-comentario2 {
+    width: 100%;
+    min-height: 20px;
+	display: inline-block;
+	margin-bottom:-18px;
+}
+
+.foto-contato {
+    width: 50px;
+    height: 80px;
+    float: left;
+    display: block;
+}
+
+.mini_foto_balao{                
+	width: 2.5em;
+	height: 2.5em;
+	border-radius:15em;
+	border-color: #c6c6c6;
+	margin-right:auto;
+	border-radius:15em;
+	display: inline;
+	margin-top:0.1em;
+	margin-bottom: -0.3em;
+	margin-left: -1em;
+}
+
+.comentario {
+    min-width: 10%;
+	max-width:75%;
+    min-height: 50px;
+    background: white;
+    float: left;
+	border-radius: 10px 10px 10px 10px;
+	font-size:smaller;
+	padding: 0.5em;
+	margin-bottom:1em;
+	margin-left:-20px;
+}
+
+.comentario2 {
+    min-width: 10%;
+	max-width:75%;
+    min-height: 50px;
+    background: #e3f2fd;
+	float: right;
+	border-radius: 10px 10px 10px 10px;
+	font-size:smaller;
+	padding: 0.5em;
+	margin-bottom:1em;
+	margin-right:0em;
+	margin-top:1em;
+}
+
+.mensagem_texto{
+	margin: 0px;
+	font-size:1.3em;
+	word-wrap: break-word;
+}
+
+.ui-messagetime{
+	color:#bdbdbd;
+	margin-top:-5px;
+	
+}
+
+		/*##### check inativo cinza #####*/
+.ui-icone-customizado-check{
+	color: #c6c6c6;
+	margin-bottom:0px;
+	margin-left: 0em;
+	margin-top: px;
+	font-size:1.0em;
+	display: inline-block;
+	float:right;
+	}
+	
+.ui-icone-customizado-check_2{
+	color: #c6c6c6;
+	margin-bottom:0px;
+	margin-left: 0em;
+	margin-top: px;
+	font-size:1.0em;
+	display: inline-block;
+	float:right;
+	}
+
+
+		/*##### check ativo laranja #####*/
+.ui-icone-customizado-check_ok{
+	color: #f18a40;
+	margin-bottom:0px;
+	margin-left: 0em;
+	margin-top: px;
+	font-size:1.0em;
+	display: inline-block;
+	float:right;
+	}
+	
+.ui-icone-customizado-check_2_ok{
+	color: #f18a40;
+	margin-bottom:0px;
+	margin-left: 0em;
+	margin-top: px;
+	font-size:1.0em;
+	display: inline-block;
+	float:right;
+	}
+
+
+		/*##### time da mensagem enviada #####*/
+.ui-icone-customizado-time{
+	color: #c6c6c6;
+	margin-bottom:0px;
+	margin-left: 0em;
+	margin-top: px;
+	font-size:0.8em;
+	display: inline-block;
+	float:right;
+	}
+
+
+
+		/*##### barra das fotos #####*/
+
+.mini_foto_grupo{                
+	width: 2em;
+	height: 2em;
+	border-radius:15em;
+	border-color: #c6c6c6;
+	margin-right:3px;
+	border-radius:15em;
+	display: inline;
+	margin-top:0.1em;
+	margin-bottom: -0.3em;
+}
+
+.mini_plus{                
+	width: 1.0em;
+	height: 1.0em;
+	border-radius:15em;
+	border-color: #c6c6c6;
+	border-radius:15em;
+	display: inline;
+	margin-top:0.3em;
+	margin-bottom: 0.3em;
+	margin-left:1em;
+	margin-right:1em;
+}
+
+
+  
+  .mini_foto_evento{                
+	width: 2em;
+	height: 2em;
+	border-radius:100%;
+	border-color: #c6c6c6;
+	margin-right:19px;
+	display: inline;
+	margin-top:0.1em;
+	margin-bottom: -0.3em;
+}
+
+
+	/*##### ajustes dos icones dos formularios  #####*/
+
+.select-wrapper span.caret {
+	color:#6fa6c6 ;
+}
+
+.dropdown-content li > span{
+	color: #01579b;
+}
+
+.select-wrapper input.select-dropdown{
+	border-bottom: 0.5px solid rgb(200, 220, 260);
+	margin-top: 10px;	
+}
+
+
+/*##### ajuste do botão on / off  #####*/
+.switch label input[type="checkbox"]:checked + .lever{
+	background-color: #C8DCFF;
+	
+}
+
+.switch label input[type="checkbox"]:checked + .lever::after
+{
+	background-color: #afccff;
+}
+
+
+
+/*##### tela buscar amigos  #####*/
+
+.pessoas_no_local{
+	position: relative;
+    color: #006bb5;
+	font-size: 13px;
+	margin-bottom: -1.7em;
+	display: block;
+	margin-top:1em;
+}
+
+
+/*##### tela perfil  #####*/
+
+.carousel {
+	height: 260px;
+	perspective: 350px;
+}
+
+.carousel .carousel-item img {
+    width: 90%;
+}
+
+
+/*##### notificações #####*/
+
+.data_notificacoes{
+	position: relative;
+	margin-top: 7px;
+	display: block;
+	font-size: 0.8em;
+	color: lightgray;
+	margin-left: -13px;
+}
+
+.[type="radio"]:not(:checked) + label::before {
+	color:white;	
+}
+
+
+
+
+/* #### css loading... by http://cssload.net/ #### */
+.popload {
+	text-align: center;
+	width:78px;
+	height:49px;
+	margin: auto;
+	position:absolute;
+	top:100px;
+	left:50%;
+	right:50%;
+	margin-left:-40px;
+}
+
+.popload span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 10px;
+	height: 10px;
+	margin: 24px auto;
+	background: rgb(7,85,137);
+	border-radius: 49px;
+		-o-border-radius: 49px;
+		-ms-border-radius: 49px;
+		-webkit-border-radius: 49px;
+		-moz-border-radius: 49px;
+	animation: popload 1.105s infinite alternate;
+		-o-animation: popload 1.105s infinite alternate;
+		-ms-animation: popload 1.105s infinite alternate;
+		-webkit-animation: popload 1.105s infinite alternate;
+		-moz-animation: popload 1.105s infinite alternate;
+}
+
+#popload_1 {
+	animation-delay: 0s;
+		-o-animation-delay: 0s;
+		-ms-animation-delay: 0s;
+		-webkit-animation-delay: 0s;
+		-moz-animation-delay: 0s;
+}
+
+#popload_2 {
+	animation-delay: 0.3295s;
+		-o-animation-delay: 0.3295s;
+		-ms-animation-delay: 0.3295s;
+		-webkit-animation-delay: 0.3295s;
+		-moz-animation-delay: 0.3295s;
+}
+
+#popload_3 {
+	animation-delay: 0.659s;
+		-o-animation-delay: 0.659s;
+		-ms-animation-delay: 0.659s;
+		-webkit-animation-delay: 0.659s;
+		-moz-animation-delay: 0.659s;
+}
+
+
+
+@keyframes popload {
+	0% {
+		width: 10px;
+		height: 10px;
+		background-color:rgba(7,85,137,0.98);
+		transform: translateY(0);
+	}
+
+	100% {
+		width: 23px;
+		height: 23px;
+		background-color:rgb(255,255,255);
+		transform: translateY(-20px);
+	}
+}
+
+@-o-keyframes popload {
+	0% {
+		width: 10px;
+		height: 10px;
+		background-color:rgba(7,85,137,0.98);
+		-o-transform: translateY(0);
+	}
+
+	100% {
+		width: 23px;
+		height: 23px;
+		background-color:rgb(255,255,255);
+		-o-transform: translateY(-20px);
+	}
+}
+
+@-ms-keyframes popload {
+	0% {
+		width: 10px;
+		height: 10px;
+		background-color:rgba(7,85,137,0.98);
+		-ms-transform: translateY(0);
+	}
+
+	100% {
+		width: 23px;
+		height: 23px;
+		background-color:rgb(255,255,255);
+		-ms-transform: translateY(-20px);
+	}
+}
+
+@-webkit-keyframes popload {
+	0% {
+		width: 10px;
+		height: 10px;
+		background-color:rgba(7,85,137,0.98);
+		-webkit-transform: translateY(0);
+	}
+
+	100% {
+		width: 23px;
+		height: 23px;
+		background-color:rgb(255,255,255);
+		-webkit-transform: translateY(-20px);
+	}
+}
+
+@-moz-keyframes popload {
+	0% {
+		width: 10px;
+		height: 10px;
+		background-color:rgba(7,85,137,0.98);
+		-moz-transform: translateY(0);
+	}
+
+	100% {
+		width: 23px;
+		height: 23px;
+		background-color:rgb(255,255,255);
+		-moz-transform: translateY(-20px);
+	}
+}
+
+
+
+
+/* Código loading (spinner) buscas autocompletes */
+@-webkit-keyframes uil-ring-anim {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes uil-ring-anim {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes uil-ring-anim {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes uil-ring-anim {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes uil-ring-anim {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes uil-ring-anim {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes uil-ring-anim {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes uil-ring-anim {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.uil-ring-css {
+  background: none;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  position:absolute;
+  top:43px;
+  right:1%;
+  margin-left:-40px;
+}
+
+.uil-ring-css > div {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  left: 10px;
+  border-radius: 30px;
+  box-shadow: 0 3px 0 0 #006bb5;
+  -ms-animation: uil-ring-anim 1.2s linear infinite;
+  -moz-animation: uil-ring-anim 1.2s linear infinite;
+  -webkit-animation: uil-ring-anim 1.2s linear infinite;
+  -o-animation: uil-ring-anim 1.2s linear infinite;
+  animation: uil-ring-anim 1.2s linear infinite;
+}

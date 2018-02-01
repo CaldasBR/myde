@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+        <script type="text/javascript" src="js/protege_pagina.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Quero Marita</title>
+
+		<!-- CSS  -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/media/imagens/favicon_marita.png" type="image/x-icon"/>
+		
+		<!-- Mercado Pago -->
+		<script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+		
+	</head>
+	
+	<body>
+		<div class="navbar-fixed transp">
+			<nav id="barra_menu" class="brown lighten-2">
+                
+            </nav>
+		</div>
+
+		<div class="row">
+			<div class="container m10 offset-m1 s12">
+				<div class="card-panel teal white">
+                    <!--margin: -15px 0 0 0; padding: 0 0 0 0;-->
+                    <div class="brown lighten-2 valign-wrapper center cadastro_title">
+                        <h6 class="valign white-text" style=" margin: 0 auto;">Informações de cobrança</h6>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <form>
+                            <div class="col m6 offset-m3 s12 fonte_form">
+                                <label for="cob_nome">Nome</label>
+                                <input id="cob_nome" type="text"/>
+
+                                <label for="cob_sobrenome">Sobrenome</label>
+                                <input id="cob_sobrenome" type="text"/>
+
+                                <label for="cob_email">Email</label>
+                                <input id="cob_email" type="email" class="validate"/>
+
+                                <div class="input-field">
+                                    <select id="cob_country">
+                                        <option value="" disabled >Ecolha uma opção</option>
+                                        <option value="Brasil" selected>Brasil</option>
+                                    </select>
+                                    <label>País</label>
+                                </div>
+
+                                <label for="cob_cep">CEP</label><br>
+                                <input id="cob_cep" type="text" onkeypress="mascara(this, '#####-###')" maxlength="9"/>
+                                <br>
+                                <div class="input-field">
+                                    <select id="cob_uf">
+                                        <option value="" disabled selected>Ecolha uma opção</option>
+                                        <option value="AC" >AC</option>
+                                        <option value="AL" >AL</option>
+                                        <option value="AM" >AM</option>
+                                        <option value="AP" >AP</option>
+                                        <option value="BA" >BA</option>
+                                        <option value="CE" >CE</option>
+                                        <option value="DF" >DF</option>
+                                        <option value="ES" >ES</option>
+                                        <option value="GO" >GO</option>
+                                        <option value="MA" >MA</option>
+                                        <option value="MG" >MG</option>
+                                        <option value="MS" >MS</option>
+                                        <option value="MT" >MT</option>
+                                        <option value="PA" >PA</option>
+                                        <option value="PB" >PB</option>
+                                        <option value="PE" >PE</option>
+                                        <option value="PI" >PI</option>
+                                        <option value="PR" >PR</option>
+                                        <option value="RJ" >RJ</option>
+                                        <option value="RN" >RN</option>
+                                        <option value="RO" >RO</option>
+                                        <option value="RR" >RR</option>
+                                        <option value="RS" >RS</option>
+                                        <option value="SC" >SC</option>
+                                        <option value="SE" >SE</option>
+                                        <option value="SP" >SP</option>
+                                        <option value="TO" >TO</option>
+                                    </select>
+                                    <label>Estado</label>
+                                </div>
+                                <br>
+
+                                <label for="cob_cidade">Cidade</label><br>
+                                <input id="cob_cidade" type="text"/>
+
+                                <label for="cob_bairro">Bairro</label><br>
+                                <input id="cob_bairro" type="text"/>
+
+                                <label for="cob_endereco">Endereço</label>
+                                <input id="cob_endereco" type="text"/>
+
+                                <label for="cob_endereco_numero">Número</label>
+                                <input id="cob_endereco_numero" type="text"/>
+
+                                <label for="cob_endereco_compl">Complemento</label>
+                                <input id="cob_endereco_compl" type="text"/>
+
+                                <label for="cob_telefone">Telefone</label>
+                                <input id="cob_telefone" type="text" maxlength="15" placeholder="(00) 00000-0000"/>
+                            </div>
+                        </form>
+                    </div>
+				</div>
+			</div>
+        </div>
+        
+        <div class="row">
+			<div class="container m10 offset-m1 s12">
+				<div class="card-panel teal white m9 offset-m3 s12">
+                        <div class="brown lighten-2 valign-wrapper center cadastro_title">
+                            <h6 class="valign white-text" style=" margin: 0 auto;">Informações de pagamento</h6>
+                        </div>
+
+                        <br>
+                        <div>
+                            <div class="center">
+                                <img src="media/imagens/cartoes_mercadopago_pequeno.jpg" alt="Cartões aceitos">
+                            </div>
+                            <br>
+                            <form action="" method="post" id="pay" name="pay" >
+                                <div class="container fonte_form">
+                                    <label for="email" style="display:none;">Email:</label>
+                                    <input id="email" style="display:none;" name="email" type="email" placeholder="your email"/>
+
+                                    <label for="cardNumber">Número do cartão:</label><br>
+                                    <input type="text" id="cardNumber" data-checkout="cardNumber" placeholder="ex: 4509 9535 6623 3704" style="width:80%;"/>
+                                    <img src="" id="paymentIMG" name="paymentIMG"/>
+
+                                    <input id="paymentMethodId" style="display:none;" name="paymentMethodId" type="text" />
+
+                                    <br>
+                                    <label for="securityCode">Código de Segurança:</label>
+                                    <input type="text" id="securityCode" data-checkout="securityCode" placeholder="ex: 123" />
+
+                                    <div class="input-field col s12">
+                                        <select id="ExpirationMonthSelect">
+                                            <option value="" disabled selected>Escolha uma opção</option>
+                                            <option value="1">1 - Janeiro</option>
+                                            <option value="2">2 - Fevereiro</option>
+                                            <option value="3">3 - Março</option>
+                                            <option value="4">4 - Abril</option>
+                                            <option value="5">5 - Maio</option>
+                                            <option value="6">6 - Junho</option>
+                                            <option value="7">7 - Julho</option>
+                                            <option value="8">8 - Agosto</option>
+                                            <option value="9">9 - Setembro</option>
+                                            <option value="10">10 - Outubro</option>
+                                            <option value="11">11 - Novembro</option>
+                                            <option value="12">12 - Dezembro</option>
+                                        </select>
+                                        <label>Mês</label>
+                                    </div>
+
+                                    <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" style="display:none;"/>
+
+                                    <div class="input-field col s12">
+                                        <select id="ExpirationYearSelect">
+                                            <option value="" disabled selected>Escolha uma opção</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                            <option value="2031">2031</option>
+                                            <option value="2032">2032</option>
+                                            <option value="2033">2033</option>
+                                            <option value="2034">2034</option>
+                                            <option value="2035">2035</option>
+                                            <option value="2036">2036</option>
+                                            <option value="2037">2037</option>
+                                        </select>
+                                        <label>Ano</label>
+                                    </div>
+
+                                    <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" style="display:none;"/>
+
+                                    <label for="email" style="display:none;">Email:</label>
+                                    <input id="email" style="display:none;" name="email" type="email" placeholder="your email"/>
+
+                                    <label for="cardholderName">Nome como está no cartão:</label>
+                                    <input type="text" id="cardholderName" data-checkout="cardholderName"/>
+
+                                    <input id="docType" style="display:none;" data-checkout="docType" value="CPF"/>
+
+                                    <label for="docNumber">Número do CPF:</label>
+                                    <input type="text" id="docNumber" data-checkout="docNumber" placeholder="ex: 000.000.000-00"/>
+
+                                    <select id="plano">
+                                        <option value="" disabled selected>Confirme o plano de assinatura</option>
+                                        <option value="1">Plano essencial (mensalidade R$ 29,90)</option>
+                                        <option value="2">Plano profissional (mensalidade R$ 49,90)</option>
+                                        <option value="3">Plano top chat (mensalidade R$ 69,90)</option>
+                                    </select>
+                                    <label>Plano</label>
+                                    <br>
+                                    <br>
+                                    <div>
+                                        <a class="right waves-effect waves-light btn orange darken-4" href="#" onClick="doPay();">Pagar</a>
+                                    </div>
+                                    <br>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+		
+		<footer id="rodape" class="page-footer brown lighten-2">
+			
+		</footer>
+	
+	
+		<!--  Scripts Padrão-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/bibliotecaAjax.js"></script>
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+		<script type="text/javascript" src="js/funcoes_genericas.js"></script>
+        
+        <!--  Scripts da página-->
+		<script type="text/javascript" src="js/pagamento.js"></script>
+        
+        <!--Script de acompanhamento do Google Anlytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-99108105-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+        
+	</body>
+</html>

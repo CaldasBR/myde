@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Quero Marita</title>
+
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/media/imagens/favicon_marita.png" type="image/x-icon"/>
+    </head>
+
+    <body>
+        <div class="navbar-fixed transp">
+			<nav id="barra_menu" class="brown lighten-2">
+                
+            </nav>
+		</div>
+        <br>
+        <div id="faixa_bread" class="col s12 brown-text text-darken-3">
+        </div>
+        <br>
+        <div class="white">
+            <div class="section">
+                <div>
+                    <h5 class="center-align" style="color: #7C635A;">Fazer indicação:</h5>
+                </div>
+                
+                <div class="row">
+                        <p style="margin-left: 12px;"><i>Os campos com (*) são obrigatórios</i></p>
+                </div>
+                
+                <div style="margin-top: -40px">
+                    <div class="row">
+                        <div class="input-field col s12 m3">
+                            <label for="nome">*Nome </label>
+                            <input id="nome" type="text"/>
+                        </div>
+                        <div class="input-field col s12 m3">
+                            <label for="email">*E-mail</label>
+                            <input id="email" type="email" class="validate"/>
+                        </div>
+                        <div class="input-field col s12 m3">
+                            <label for="celular">Celular</label>
+                            <input id="celular" type="text"/>
+                        </div>
+                        <a href="#indicar" class="waves-effect waves-light btn botao_indicar" href="javascript:void(0);" onclick="cadastrar_unico();" >
+                            Indicar
+                        </a>
+                    </div>
+                    
+                    <div class="row">
+                        <p style="margin-left: 12px;"><i>Abaixo você pode fazer o upload dos contatos de uma só vez através de uma planilha em excel. Se achar necessário, disponibilizamos um modelo abaixo para download</i></p>
+                    </div>
+                    
+                    <div class="row">
+                        <a href= "media/downloads/layout_indicados.xlsx" download><input class="waves-effect waves-light btn botao_indicar" type="button" value="Baixar modelo" style="font-size: small;"></a>
+                        
+                        <form method="post" action="bg_upload.php?fn=indicacao" enctype="multipart/form-data">
+                            <div class="file-field input-field col s12 m3">
+                                <div class="btn">
+                                    <span>(1) Importar arquivo</span>
+                                    <input type="file" name="arquivo">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                            <input class="waves-effect waves-light btn botao_indicar" type="submit" value="(2) Salvar arquivo" style="font-size: small; height: 45px;margin-top: 15px;"/>
+                        </form>
+                    </div>
+                        
+                </div>
+            </div>
+            
+            <div class="section">
+                <table class="bordered centered">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Celular</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabela_indicados">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer id="rodape" class="page-footer brown lighten-2">
+			
+		</footer>
+
+        <!--  Scripts Padrão-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/bibliotecaAjax.js"></script>
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+		<script type="text/javascript" src="js/funcoes_genericas.js"></script>
+        
+        <!--  Scripts da página-->
+        <script type="text/javascript" src="js/indicados.js"></script>
+
+        <!--Script de acompanhamento do Google Anlytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-99108105-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>
