@@ -27,9 +27,9 @@
         echo "A consulta não retornou nenhum resultado";
     }
 
-    echo "<br><br>Lucas agora vai! e o commit tmb foi! Resolvido =) ";
-    echo "beleza muito obrigado";
-    echo "teste commit";
+    echo "<br><br>Lucas agora vai! e o commit tmb foi! Resolvido =) <br>";
+    echo "beleza muito obrigado <br>";
+    echo "teste commit <br>";
     mysqli_close($mysql);
 
 ?>
