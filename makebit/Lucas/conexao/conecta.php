@@ -23,17 +23,13 @@
         while($dados = mysqli_fetch_row($result)){
             var_dump($dados);
 
-<<<<<<< HEAD
             echo "<br><br><br>";
             echo "Broker: " . $dados[0] . "<br>";
             echo "Market: " . $dados[1] . "<br>";
             echo "Data: " . $dados[2] . "<br>";
-            echo "etc...<br><br>"
+            echo "etc...<br><br>";
         }
     }else{
-=======
-    }else:
->>>>>>> 36e2ff1395423b3e9440a8635cf21da9681dea2c
         echo "A consulta não retornou nenhum resultado";
     endif;
 
