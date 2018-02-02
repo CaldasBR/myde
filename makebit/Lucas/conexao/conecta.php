@@ -28,6 +28,9 @@
             echo "Broker: " . $dados[0] . "<br>";
             echo "Market: " . $dados[1] . "<br>";
             echo "Data: " . $dados[2] . "<br>";
+            echo "Abertura: " . $dados[3] . "<br>";
+            echo "Topo: " . $dados[4] . "<br>";
+            echo "fundo: " . $dados[5] . "<br>";
             echo "etc...<br><br>";
         }
     }else{
