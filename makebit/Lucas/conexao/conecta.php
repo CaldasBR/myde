@@ -19,10 +19,11 @@
     $sql = "SELECT * from candlestick limit 10";
     $result = mysqli_query($mysql,$sql);
 
-    if ($result){
+    if ($result):
         while($dados = mysqli_fetch_row($result)){
             var_dump($dados);
 
+<<<<<<< HEAD
             echo "<br><br><br>";
             echo "Broker: " . $dados[0] . "<br>";
             echo "Market: " . $dados[1] . "<br>";
@@ -30,12 +31,15 @@
             echo "etc...<br><br>"
         }
     }else{
+=======
+    }else:
+>>>>>>> 36e2ff1395423b3e9440a8635cf21da9681dea2c
         echo "A consulta não retornou nenhum resultado";
-    }
+    endif;
 
     echo "<br><br>Lucas agora vai! e o commit tmb foi! Resolvido =) <br>";
     echo "beleza muito obrigado <br>";
-    echo "teste commit <br>";
+    echo "teste sintaxe ok <br>";
     mysqli_close($mysql);
 
 ?>
