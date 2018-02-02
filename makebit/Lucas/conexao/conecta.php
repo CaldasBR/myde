@@ -28,7 +28,7 @@
     }
 
     echo "<br><br>Lucas agora vai! e o commit tmb foi! Resolvido =) ";
-    echo "beleza muito obrigado"
+    echo "beleza muito obrigado";
     mysqli_close($mysql);
 
 ?>
