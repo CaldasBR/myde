@@ -29,7 +29,7 @@
 
     echo "<br><br>Lucas agora vai! e o commit tmb foi! Resolvido =) ";
     echo "beleza muito obrigado";
-     
+    echo "teste commit"
     mysqli_close($mysql);
 
 ?>
