@@ -13,13 +13,14 @@
         echo "Ops houve um erro (". $mysql -> conect_errno . ") ". $mysql -> conect_error . "<br>";
     }
     else{
-      echo "Parabéns a conexão funciona <br>";
+        echo "Parabéns a conexão funciona <br>";
     }
 
     $sql = "SELECT * from candlestick limit 10";
     $result = mysqli_query($mysql,$sql);
 
-    if ($result):
+    if($result){
+
         while($dados = mysqli_fetch_row($result)){
             var_dump($dados);
 
@@ -31,7 +32,7 @@
         }
     }else{
         echo "A consulta não retornou nenhum resultado";
-    endif;
+    };
 
     echo "<br><br>Lucas agora vai! e o commit tmb foi! Resolvido =) <br>";
     echo "beleza muito obrigado <br>";
