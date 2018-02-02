@@ -29,7 +29,7 @@
 
     echo "<br><br>Lucas agora vai! e o commit tmb foi! Resolvido =) <br>";
     echo "beleza muito obrigado <br>";
-    echo "teste commit <br>";
+    echo "teste sintaxe ok <br>";
     mysqli_close($mysql);
 
 ?>
