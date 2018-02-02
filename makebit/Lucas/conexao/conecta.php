@@ -19,7 +19,6 @@
     $sql = "SELECT * from candlestick limit 10";
     $result = mysqli_query($mysql,$sql);
 
-    echo "br";
     if ($result){
         while($dados = mysqli_fetch_row($result)){
             var_dump($dados);
