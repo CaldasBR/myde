@@ -31,7 +31,10 @@
             echo "Abertura: " . $dados[3] . "<br>";
             echo "Topo: " . $dados[4] . "<br>";
             echo "fundo: " . $dados[5] . "<br>";
-            echo "etc...<br><br>";
+            echo "Fechamento: " . $dados[6] . "<br>";
+            echo "Volume: " . $dados[7] . "<br>";
+            echo "<br><br>";
+
         }
     }else{
         echo "A consulta não retornou nenhum resultado";
