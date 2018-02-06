@@ -36,7 +36,7 @@
             echo "<br><br>";
 
         }
-    else?
+    else:
         echo "A consulta não retornou nenhum resultado";
     endif;
 
