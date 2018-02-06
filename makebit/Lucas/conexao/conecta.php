@@ -19,7 +19,7 @@
     $sql = "SELECT * from candlestick limit 10";
     $result = mysqli_query($mysql,$sql);
 
-    if($result){
+    if($result):
 
         while($dados = mysqli_fetch_row($result)){
             var_dump($dados);
@@ -36,13 +36,10 @@
             echo "<br><br>";
 
         }
-    }else{
+    else?
         echo "A consulta não retornou nenhum resultado";
-    };
+    endif;
 
-    echo "<br><br>Lucas agora vai! e o commit tmb foi! Resolvido =) <br>";
-    echo "beleza muito obrigado <br>";
-    echo "teste sintaxe ok <br>";
-    mysqli_close($mysql);
+        mysqli_close($mysql);
 
 ?>
