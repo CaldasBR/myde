@@ -9,12 +9,12 @@
 
     $mysql=new mysqli($host, $usuario, $senha, $bd);
 
-    if($mysql -> conect_errno){
+    if($mysql -> conect_errno):
         echo "Ops houve um erro (". $mysql -> conect_errno . ") ". $mysql -> conect_error . "<br>";
-    }
-    else{
+
+    else:
         echo "Parabéns a conexão funciona <br>";
-    }
+    endif;
 
     $sql = "SELECT * from candlestick limit 10";
     $result = mysqli_query($mysql,$sql);
