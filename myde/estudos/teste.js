@@ -16,5 +16,4 @@ result = 'Fora da função -  teste2:' + teste2 + '<br>';
 result = 'Vou executar -  teste2: <br>';
 teste2();
 
-
 document.body.innerHTML = result;
