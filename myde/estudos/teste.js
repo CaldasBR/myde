@@ -1,5 +1,5 @@
 var teste1 = 'oi';
-function teste2 = {
+function teste2 {
     var teste3 = 'tchau';
 
     console.log('Dentro da função -  teste1:' + teste1);
