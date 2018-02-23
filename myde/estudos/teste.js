@@ -11,3 +11,6 @@ var teste2 = function(){
 console.log('Fora da função -  teste1:' + teste1);
 console.log('Fora da função -  teste2:' + teste2);
 console.log('Fora da função -  teste2:' + teste3);
+
+console.log('Vou executar -  teste2:');
+teste2();
